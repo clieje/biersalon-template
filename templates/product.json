@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "product_hero": {
+            "type": "product_hero"
+        },
+        "uitgelicht_2": {
+            "type": "uitgelicht_2"
+        }
+    },
+    "layout": "product",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "product_hero",
+        "uitgelicht_2"
+    ]
+}
