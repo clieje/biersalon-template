@@ -34,11 +34,11 @@
     "category": {
       "type": "category",
       "settings": {
-        "text_headline": "Short heading here",
+        "text_headline": "onze nieuwste bieren",
         "url_button_link": "",
         "text_button_text": "Bekijken",
-        "collection_collection": "",
-        "collection_collection_limit": 6
+        "collection_collection": "bieren",
+        "collection_collection_limit": 4
       }
     },
     "uitgelicht_2": {
