@@ -10,8 +10,16 @@
 
                             
                         </div>
-{% endfor %}</div><div class="footer_link-grid"><div class="footer-column"><h5 class="footerh3">openingstijden <br>
-van de winkel</h5><div class="footer-element"><div class="div-block-7"><div class="div-block-6"><div class="_16-txt-2 day">Maandag</div><div class="_16-txt-2 opa">Gesloten</div></div><div class="div-block-6"><div class="_16-txt-2 day">Dinsdag</div><div class="_16-txt-2 opa">12.00 - 18.00</div></div><div class="div-block-6"><div class="_16-txt-2 day">Woensdag</div><div class="_16-txt-2 opa">12.00 - 18.00</div></div><div class="div-block-6"><div class="_16-txt-2 day">Donderdag</div><div class="_16-txt-2 opa">12.00 - 18.00</div></div><div class="div-block-6"><div class="_16-txt-2 day">Vrijdag</div><div class="_16-txt-2 opa">10.00 - 18.00</div></div><div class="div-block-6"><div class="_16-txt-2 day">Zaterdag</div><div class="_16-txt-2 opa">10.00 - 17.00</div></div><div class="div-block-6"><div class="_16-txt-2 day">Zondag</div><div class="_16-txt-2 opa">12.00 - 17.00</div></div></div></div></div></div><div class="footer_link-grid"><div class="div-block-26"><div class="div-block-27"><div class="_16-txt-2 day">KVK</div><div class="_16-txt-2 opa">82508534</div></div><div class="div-block-27"><div class="_16-txt-2 day">BTW</div><div class="_16-txt-2 opa">NL003694828B64</div></div></div></div></div></div></div><div class="footer_divider"></div><div class="padding-global padding-section-small sandy"><div class="container-large"><div class="footer_icon-grid"><div class="footer_icon-block"><div class="text-size-regular text-color-white black">Verzendmethoden</div><div class="footer_icon-row">{% for block in section.blocks %}
+{% endfor %}</div><div class="footer_link-grid"><div class="footer-column"><h5 class="footerh3">
+{{ section.settings.text_openingstijden }}
+</h5>
+<div class="footer-element"><div class="div-block-7"><div class="div-block-6"><div class="_16-txt-2 day">
+{{ section.settings.text_dagen }}
+</div>
+<div class="_16-txt-2 opa">
+{{ section.settings.text_tijden }}
+</div>
+</div></div></div></div></div><div class="footer_link-grid"><div class="div-block-26"><div class="div-block-27"><div class="_16-txt-2 day">KVK</div><div class="_16-txt-2 opa">82508534</div></div><div class="div-block-27"><div class="_16-txt-2 day">BTW</div><div class="_16-txt-2 opa">NL003694828B64</div></div></div></div></div></div></div><div class="footer_divider"></div><div class="padding-global padding-section-small sandy"><div class="container-large"><div class="footer_icon-grid"><div class="footer_icon-block"><div class="text-size-regular text-color-white black">Verzendmethoden</div><div class="footer_icon-row">{% for block in section.blocks %}
     {% if block.type == "lieferung-icon" %}
                     <div li-block="Lieferung-icon" class="footer_icon-item">
                                     <img src="{{ block.settings.image_icon | img_url: 'master' }}" loading="lazy" alt="{{ block.settings.image_icon.alt }}" class="footer_shipping-icon">
@@ -69,4 +77,4 @@ van de winkel</h5><div class="footer-element"><div class="div-block-7"><div clas
       }
     });
   });
-</script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]},{"type":"@app"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
+</script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]},{"type":"@app"}],"settings":[{"id":"text_openingstijden","type":"text","label":"Openingstijden","default":"openingstijden <br\/>van de winkel"},{"id":"text_dagen","type":"text","label":"Dagen","default":"Maandag"},{"id":"text_tijden","type":"text","label":"Tijden","default":"Gesloten"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
