@@ -1,20 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "liquify_hero": {
-            "type": "liquify_hero"
-        },
-        "category": {
-            "type": "category"
-        },
-        "uitgelicht_2": {
-            "type": "uitgelicht_2"
-        }
+  "sections": {
+    "liquify_hero": {
+      "type": "liquify_hero",
+      "settings": {
+        "url_categorie_link": "",
+        "text_headline_1": "Naar alle bieren",
+        "url_categorie_link_1": "",
+        "text_headline_2": "check onze nieuwste bieren",
+        "url_categorie_link_2": "",
+        "text_headline_3": "check de amerikaanse collectie",
+        "text_checkmark_1": "Check",
+        "text_checkmark_2": "Check",
+        "text_checkmark_3": "Check",
+        "text_checkmark_4": "Check",
+        "text_checkmark_11": "Check",
+        "text_checkmark_21": "Check",
+        "text_checkmark_31": "Check",
+        "text_checkmark_41": "Check"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "liquify_hero",
-        "category",
-        "uitgelicht_2"
-    ]
+    "category": {
+      "type": "category",
+      "settings": {
+        "text_headline": "Short heading here",
+        "url_button_link": "",
+        "text_button_text": "Bekijken",
+        "collection_collection": "bieren",
+        "collection_collection_limit": 4
+      }
+    },
+    "uitgelicht_2": {
+      "type": "uitgelicht_2",
+      "settings": {
+        "text_headline": "Short heading here",
+        "url_button_link": "",
+        "text_button_text": "Bekijken"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "liquify_hero",
+    "category",
+    "uitgelicht_2"
+  ]
 }
