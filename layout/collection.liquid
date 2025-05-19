@@ -91,6 +91,16 @@
     Shopify.queryParams.sort_by = value;
     location.search = new URLSearchParams(Shopify.queryParams).toString();
   });
+</script><script>document.addEventListener("DOMContentLoaded", function() {
+    const scoreText = document.querySelector(".score-text");
+    const targetDiv = document.querySelector(".div-block-3");
+    if (scoreText && targetDiv) {
+      const value = scoreText.textContent.trim();
+      if (!value) {
+        targetDiv.style.opacity = "0";
+      }
+    }
+  });
 </script>
 </body>
 </html>
