@@ -1,20 +1,60 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "liquify_hero": {
-            "type": "liquify_hero"
-        },
-        "category": {
-            "type": "category"
-        },
-        "uitgelicht_2": {
-            "type": "uitgelicht_2"
-        }
+  "sections": {
+    "liquify_hero": {
+      "type": "liquify_hero",
+      "settings": {
+        "url_categorie_link": "shopify://collections/bieren",
+        "image_afbeelding_1": "shopify://shop_images/681091602fa8792cd54edda7_newbg.webp",
+        "text_headline_1": "Naar alle bieren",
+        "url_categorie_link_1": "",
+        "text_headline_2": "check onze nieuwste bieren",
+        "image_afbeelding_2": "shopify://shop_images/6821afe7df712087af2a1fc5_robuustereiger.png",
+        "url_categorie_link_2": "",
+        "text_headline_3": "check de amerikaanse collectie",
+        "image_afbeelding_3": "shopify://shop_images/680f706caa9dac4c341bde63_usaa.webp",
+        "text_checkmark_1": "Door bierliefhebbers",
+        "text_checkmark_2": "Binnen 24 uur verzonden",
+        "text_checkmark_3": "1.500+ speciaalbieren",
+        "text_checkmark_4": "Fysieke store in Nederland",
+        "text_checkmark_11": "Door bierliefhebbers",
+        "text_checkmark_21": "Binnen 24 uur verzonden",
+        "text_checkmark_31": "1.500+ speciaalbieren",
+        "text_checkmark_41": "Fysieke store in Nederland"
+      }
     },
-    "layout": "theme",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "liquify_hero",
-        "category",
-        "uitgelicht_2"
-    ]
+    "category": {
+      "type": "category",
+      "settings": {
+        "text_headline": "Short heading here",
+        "url_button_link": "",
+        "text_button_text": "Bekijken",
+        "collection_collection": "",
+        "collection_collection_limit": 6
+      }
+    },
+    "uitgelicht_2": {
+      "type": "uitgelicht_2",
+      "settings": {
+        "text_headline": "Short heading here",
+        "url_button_link": "",
+        "text_button_text": "Bekijken"
+      }
+    }
+  },
+  "layout": "theme",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "liquify_hero",
+    "category",
+    "uitgelicht_2"
+  ]
 }
