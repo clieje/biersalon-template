@@ -4,7 +4,8 @@
     Niet op vooraad    </div>
 {% endif %}{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag-2 is-yellow">
     Korting    </div>
-{% endif %}</div></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link-2 w-inline-block"><div class="product-item_left-2"><div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div><div li-object="product.title" class="heading-style-h4-2 product">{{ product.title }}</div></div><div class="div-block-3"><div class="rt_text"><div class="small-text">Untappd</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
+{% endif %}</div></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link-2 w-inline-block"><div class="product-item_left-2"><div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div><div li-object="product.title" class="heading-style-h4-2 product">{{ product.title }}</div></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
+    <div class="rt_text"><div class="small-text">Untappd</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
     <div li-object:text="product.metafields.custom.rating_count" class="small-text semi">
 {{ product.metafields.custom.rating_count }}
 </div>    </div>
@@ -13,7 +14,8 @@
     <div li-object:text="product.metafields.custom.rating" class="small-text semi score-text">
 {{ product.metafields.custom.rating }}
 </div>    </div>
-{% endif %}</div></div></div><div class="product_info_meta">{% if product.metafields.custom.inhoud %}    <div li-if="product.metafields.custom.inhoud">
+{% endif %}</div></div>    </div>
+{% endif %}<div class="product_info_meta">{% if product.metafields.custom.inhoud %}    <div li-if="product.metafields.custom.inhoud">
     <div li-object:text="product.metafields.custom.inhoud" class="small-text">
 {{ product.metafields.custom.inhoud }}
 </div>    </div>
