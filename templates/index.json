@@ -15,11 +15,14 @@
         "url_categorie_link": "/collections/bieren?sort_by=created-descending",
         "image_afbeelding_1": "shopify://shop_images/681091602fa8792cd54edda7_newbg.webp",
         "text_headline_1": "Naar alle bieren",
+        "text_bekijken_1": "Bekijken",
         "url_categorie_link_1": "/collections/bieren?sort_by=created-descending",
         "text_headline_2": "check onze nieuwste bieren",
+        "text_bekijken_2": "Bekijken",
         "image_afbeelding_2": "shopify://shop_images/6821afe7df712087af2a1fc5_robuustereiger.png",
         "url_categorie_link_2": "shopify://collections/usa",
         "text_headline_3": "check de amerikaanse collectie",
+        "text_bekijken_3": "Bekijken",
         "image_afbeelding_3": "shopify://shop_images/680f706caa9dac4c341bde63_usaa.webp",
         "text_checkmark_1": "Door bierliefhebbers",
         "text_checkmark_2": "Binnen 24 uur verzonden",
@@ -37,7 +40,7 @@
         "text_headline": "onze nieuwste bieren",
         "url_button_link": "/collections/bieren?sort_by=created-descending",
         "text_button_text": "Bekijken",
-        "collection_collection": "bieren",
+        "collection_collection": "producten-op-voorraad",
         "collection_collection_limit": 4
       }
     },
