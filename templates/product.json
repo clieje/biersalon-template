@@ -12,7 +12,7 @@
     "product_hero": {
       "type": "product_hero",
       "settings": {
-        "text_brouwerij_2": "Data"
+        "text_bierstijl": "{{ product.metafields.custom.bierstijl | metafield_text }}"
       }
     },
     "uitgelicht_2": {
