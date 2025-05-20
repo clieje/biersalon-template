@@ -1,12 +1,10 @@
 <script src="{{ 'liquify_custom.js' | asset_url }}" type="text/javascript"></script>
 <div li-element="product-variant-container" class="product-item_component-2" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)"><div class="product-item_image-link-2"><a li-object:href="product.url" href="{{ product.url }}" class="product-item_image-wrapper-2 w-inline-block"><img li-object:src="product.featured_image | img_url: 'master'" li-object:alt="product.featured_image.alt" alt="{{ product.featured_image.alt }}" src="{{ product.featured_image | img_url: 'master' }}" loading="lazy" class="product-item_image-2">
-</a><div class="product-item_tag_list-2"><div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag-2">
-{{ section.settings.text_niet_op_voorraad }}
-</div>
-<div li-if="product.compare_at_price_max> product.price" class="product-item_tag-2 is-yellow">
-{{ section.settings.text_niet_op_voorraad }}
-</div>
-</div></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link-2 w-inline-block"><div class="product-item_left-2"><div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div><div li-object="product.title" class="heading-style-h4-2 product">{{ product.title }}</div></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
+</a><div class="product-item_tag_list-2">{% if product.selected_or_first_available_variant.available != true %}    <div li-if="product.selected_or_first_available_variant.available != true" class="product-item_tag-2">
+    Niet op vooraad    </div>
+{% endif %}{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag-2 is-yellow">
+    Korting    </div>
+{% endif %}</div></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link-2 w-inline-block"><div class="product-item_left-2"><div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div><div li-object="product.title" class="heading-style-h4-2 product">{{ product.title }}</div></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
     <div class="rt_text"><div class="small-text">Untappd</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
     <div li-object:text="product.metafields.custom.rating_count" class="small-text semi aantalr">
 {{ product.metafields.custom.rating_count }}
