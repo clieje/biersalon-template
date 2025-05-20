@@ -84,12 +84,12 @@
     });
   });
 </script><script>document.addEventListener("DOMContentLoaded", function() {
-      const el = document.getElementById('aantalr');
-      if (el) {
-        let getal = parseInt(el.textContent.replace(/\D/g, ''), 10);
-        if (!isNaN(getal)) {
-          el.textContent = getal.toLocaleString('nl-NL');
-        }
+    const elementen = document.querySelectorAll('.aantalr');
+    elementen.forEach(function(el) {
+      let getal = parseInt(el.textContent.replace(/\D/g, ''), 10);
+      if (!isNaN(getal)) {
+        el.textContent = getal.toLocaleString('nl-NL');
       }
     });
-  </script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]},{"type":"@app"}],"settings":[{"id":"text_openingstijden","type":"text","label":"Openingstijden","default":"openingstijden <br\/>van de winkel"},{"id":"text_dagen","type":"text","label":"Dagen","default":"Maandag"},{"id":"text_tijden","type":"text","label":"Tijden","default":"Gesloten"},{"id":"text_shipping","type":"text","label":"Shipping","default":"Verzendmethoden"},{"id":"text_betaalmethoden","type":"text","label":"Betaalmethoden","default":"Betaalmethoden"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
+  });
+</script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]},{"type":"@app"}],"settings":[{"id":"text_openingstijden","type":"text","label":"Openingstijden","default":"openingstijden <br\/>van de winkel"},{"id":"text_dagen","type":"text","label":"Dagen","default":"Maandag"},{"id":"text_tijden","type":"text","label":"Tijden","default":"Gesloten"},{"id":"text_shipping","type":"text","label":"Shipping","default":"Verzendmethoden"},{"id":"text_betaalmethoden","type":"text","label":"Betaalmethoden","default":"Betaalmethoden"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
