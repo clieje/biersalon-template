@@ -7,19 +7,10 @@
 {{ product.title }}
 </h1></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
     <div class="rt_text"><div class="small-text productpage">Untappd</div><div class="div-block-16"><div class="small-text productpage">(</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating" class="div-block-17">
-    <div li-object:text="product.metafields.custom.rating_count" class="small-text semi productpage aantalr">
+    <div id="aantalr" li-object:text="product.metafields.custom.rating_count" class="small-text semi productpage aantalr">
 {{ product.metafields.custom.rating_count }}
 </div>    </div>
-{% endif %}<div class="small-text semi productpage">ratings</div><div class="small-text productpage">)</div></div><div class="embed_formatting_ratings w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function() {
-    const elementen = document.querySelectorAll('.aantalr');
-    elementen.forEach(function(el) {
-      let getal = parseInt(el.textContent.replace(/\D/g, ''), 10);
-      if (!isNaN(getal)) {
-        el.textContent = getal.toLocaleString('nl-NL');
-      }
-    });
-  });
-</script></div></div><div class="untappd_meta"><div class="rating-wrapper"><div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating">
+{% endif %}<div class="small-text semi productpage">ratings</div><div class="small-text productpage">)</div></div></div><div class="untappd_meta"><div class="rating-wrapper"><div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating">
 </div><div class="progress-bar"></div></div><div class="rt_text">{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
     <div li-object:text="product.metafields.custom.rating" class="score-text">
 {{ product.metafields.custom.rating }}

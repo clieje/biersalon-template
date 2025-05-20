@@ -185,6 +185,15 @@
       console.error(e);
     });
   });
-</script>
+</script><script>document.addEventListener("DOMContentLoaded", function() {
+      const el = document.getElementById('aantalr');
+      if (el) {
+        let getal = parseInt(el.textContent.replace(/\D/g, ''), 10);
+        if (!isNaN(getal)) {
+          el.textContent = getal.toLocaleString('nl-NL');
+        }
+      }
+    });
+  </script>
 </body>
 </html>
