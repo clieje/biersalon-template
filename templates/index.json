@@ -34,8 +34,8 @@
     "category": {
       "type": "category",
       "settings": {
-        "text_headline": "Short heading here",
-        "url_button_link": "",
+        "text_headline": "onze nieuwste bieren",
+        "url_button_link": "/collections/bieren?sort_by=created-descending",
         "text_button_text": "Bekijken",
         "collection_collection": "bieren",
         "collection_collection_limit": 4
