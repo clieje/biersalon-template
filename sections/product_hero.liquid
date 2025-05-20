@@ -35,9 +35,11 @@
             <div li-js-if="selected_or_first_available_variant.available != false" class="div-block-13">
         <div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18"><circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#90f58c"></circle><path id="Checkmark" d="M2.973,4.964,7.937,0l.7.7L2.973,6.365,0,3.4l.7-.7Z" transform="translate(4.681 5.817)" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">Op voorraad</div>        </div>
     </template>
-</div><div><div class="_16-txt">+ <span li-object:text="product.metafields.custom.statiegeld">
+</div>{% if product.metafields.custom.statiegeld != blank %}    <div li-if="product.metafields.custom.statiegeld != blank">
+    <div class="_16-txt">+ <span li-object:text="product.metafields.custom.statiegeld">
 {{ product.metafields.custom.statiegeld }}
-</span>statiegeld</div></div></div><div class="add-to-cart-form-pro w-form">{% form 'product', product, class: 'product-header-default' %}
+</span>statiegeld</div>    </div>
+{% endif %}</div><div class="add-to-cart-form-pro w-form">{% form 'product', product, class: 'product-header-default' %}
 <template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="add-to--pp">
         <input class="form-input w-input" max="product.variants.first.inventory_quantity" maxlength="256" name="quantity" li-element="add-to-cart-quantity" data-name="Quantity" min="1" placeholder="1" type="number" id="quantity" x-model="quantity">
