@@ -5,7 +5,7 @@
                         </div>
 {% endfor %}<div class="product-info-container"><div><div li-object="product.vendor" class="small_vendor_text-2">{{ product.vendor }}</div><h1 li-object:text="product.title" class="h1_productpage">
 {{ product.title }}
-</h1></div>{% unless product.metafields.custom.landen != blank %}    <div li-unless="product.metafields.custom.landen != blank" class="div-block-3">
+</h1></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
     <div class="rt_text"><div class="small-text productpage">Untappd</div><div class="div-block-16"><div class="small-text productpage">(</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating" class="div-block-17">
     <div li-object:text="product.metafields.custom.rating_count" class="small-text semi productpage">
 {{ product.metafields.custom.rating_count }}
@@ -16,7 +16,7 @@
 {{ product.metafields.custom.rating }}
 </div>    </div>
 {% endif %}</div></div>    </div>
-{% endunless %}<div class="productdata"><div class="meta-data-div"><div class="normal-text semi _14">Inhoud</div><div li-object:text="product.metafields.custom.inhoud" class="normal-text _14">
+{% endif %}<div class="productdata"><div class="meta-data-div"><div class="normal-text semi _14">Inhoud</div><div li-object:text="product.metafields.custom.inhoud" class="normal-text _14">
 {{ product.metafields.custom.inhoud }}
 </div></div><div class="meta-data-div"><div class="normal-text semi _14">Land van herkomst</div><div li-object:text="product.metafields.custom.landen" class="normal-text _14">
 {{ product.metafields.custom.landen }}
