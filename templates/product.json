@@ -12,7 +12,17 @@
     "product_hero": {
       "type": "product_hero",
       "settings": {
-        "text_bierstijl": "{{ product.metafields.custom.bierstijl | metafield_text }}"
+        "text_inhoud": "Inhoud",
+        "text_land_van_herkomst": "Land van herkomst",
+        "text_brouwerij": "Brouwerij",
+        "text_bierstijl": "Bierstijl",
+        "text_abv": "ABV",
+        "text_beschrijving": "Beschrijving",
+        "text_statiegeld": "statiegeld",
+        "text_door_bierliefhebbers": "Door bierliefhebbers",
+        "text_binnen_24_uur_verzonden": "Binnen 24 uur verzonden",
+        "text_1500_speciaalbieren": "1.500+ speciaalbieren",
+        "text_fysieke_store": "Fysieke store"
       }
     },
     "uitgelicht_2": {
