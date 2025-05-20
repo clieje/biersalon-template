@@ -12,21 +12,23 @@
     "liquify_hero": {
       "type": "liquify_hero",
       "settings": {
-        "url_categorie_link": "",
+        "url_categorie_link": "/collections/bieren?sort_by=created-descending",
         "image_afbeelding_1": "shopify://shop_images/681091602fa8792cd54edda7_newbg.webp",
         "text_headline_1": "Naar alle bieren",
-        "url_categorie_link_1": "",
+        "url_categorie_link_1": "/collections/bieren?sort_by=created-descending",
         "text_headline_2": "check onze nieuwste bieren",
-        "url_categorie_link_2": "",
+        "image_afbeelding_2": "shopify://shop_images/6821afe7df712087af2a1fc5_robuustereiger.png",
+        "url_categorie_link_2": "shopify://collections/usa",
         "text_headline_3": "check de amerikaanse collectie",
-        "text_checkmark_1": "Check",
-        "text_checkmark_2": "Check",
-        "text_checkmark_3": "Check",
-        "text_checkmark_4": "Check",
-        "text_checkmark_11": "Check",
-        "text_checkmark_21": "Check",
-        "text_checkmark_31": "Check",
-        "text_checkmark_41": "Check"
+        "image_afbeelding_3": "shopify://shop_images/680f706caa9dac4c341bde63_usaa.webp",
+        "text_checkmark_1": "Door bierliefhebbers",
+        "text_checkmark_2": "Binnen 24 uur verzonden",
+        "text_checkmark_3": "1.500+ speciaalbieren",
+        "text_checkmark_4": "Fysieke store in Nederland",
+        "text_checkmark_11": "Door bierliefhebbers",
+        "text_checkmark_21": "Binnen 24 uur verzonden",
+        "text_checkmark_31": "1.500+ speciaalbieren",
+        "text_checkmark_41": "Fysieke store in Nederland"
       }
     },
     "category": {
