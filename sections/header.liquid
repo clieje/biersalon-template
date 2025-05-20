@@ -87,7 +87,7 @@
 {% endif %}</div><nav li-for:inside="language in localization.available_languages" class="language_list w-dropdown-list">
         {% for language in localization.available_languages %}                            
                             {% unless localization.language.iso_code == language.iso_code %}    <div li-unless="localization.language.iso_code == language.iso_code">
-    <a li-object="language.name" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}" hreflang="{{ language.iso_code }}" href="#" class="language-link">{{ language.name }}</a><a li-object="language.name" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}" hreflang="{{ language.iso_code }}" href="#" class="language-link">{{ language.name }}</a>    </div>
+    <a li-object="language.name" lang="{{ language.iso_code }}" data-value="{{ language.iso_code }}" hreflang="{{ language.iso_code }}" href="#" class="language-link">{{ language.name }}</a>    </div>
 {% endunless %}
                             
                     {% endfor %}    </nav>
