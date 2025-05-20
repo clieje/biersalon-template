@@ -44,12 +44,14 @@
         "collection_collection_limit": 4
       }
     },
-    "uitgelicht_2": {
-      "type": "uitgelicht_2",
+    "category_Ci8LWf": {
+      "type": "category",
       "settings": {
-        "text_headline": "Short heading here",
-        "url_button_link": "",
-        "text_button_text": "Bekijken"
+        "text_headline": "de nieuwste ipa's",
+        "url_button_link": "shopify://collections/ipa",
+        "text_button_text": "Bekijken",
+        "collection_collection": "ipa",
+        "collection_collection_limit": 4
       }
     }
   },
@@ -58,6 +60,6 @@
   "order": [
     "liquify_hero",
     "category",
-    "uitgelicht_2"
+    "category_Ci8LWf"
   ]
 }
