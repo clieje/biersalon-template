@@ -32,7 +32,15 @@
     "uitgelicht_2": {
       "type": "uitgelicht_2",
       "settings": {
-        "text_headline": "Meer van dezelfde <br> brouwerij",
+        "text_headline": "Meer van dezelfde  brouwerij",
+        "url_button_link": "",
+        "text_button_text": "Bekijken"
+      }
+    },
+    "uitgelicht_2_JMJVfH": {
+      "type": "uitgelicht_2",
+      "settings": {
+        "text_headline": "Meer van dezelfde  brouwerij",
         "url_button_link": "",
         "text_button_text": "Bekijken"
       }
@@ -42,6 +50,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "product_hero",
-    "uitgelicht_2"
+    "uitgelicht_2",
+    "uitgelicht_2_JMJVfH"
   ]
 }
