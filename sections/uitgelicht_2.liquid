@@ -1,4 +1,4 @@
-<div class="padding-global padding-section-medium"><div class="container-large"><div class="product_component"><div id="w-node-_6a6da0af-4698-8e0a-2b89-73c231eb9080-14be69d2" class="product_heading-wrapper"><div class="product_heading"><div class="max-width-large"><h2 class="heading-style-h2">
+<div class="padding-global padding-section-medium"><div class="container-large"><div class="product_component"><div class="product_heading-wrapper"><div class="product_heading"><div class="max-width-large"><h2 class="heading-style-h2">
 {{ section.settings.text_headline }}
 </h2>
 </div></div><div class="product_button-row hide-mobile-landscape"></div></div>{% assign collection = collections['bieren'] %}
@@ -9,7 +9,7 @@
         {% for products in collection.products %}                            
                             {% if product.vendor == vendor and productcount < 4 and product.available != false %}    <div li-if="product.vendor == vendor and productcount < 4 and product.available != false" role="listitem" class="product_list-item w-dyn-item">
     {% render 'product_item', product: product %}
-{% productcount = productcount | plus: 1 %}
+{% assign productcount = productcount | plus: 1 %}
     </div>
 {% endif %}
                             
