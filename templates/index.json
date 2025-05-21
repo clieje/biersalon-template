@@ -44,6 +44,15 @@
         "collection_collection_limit": 4
       }
     },
+    "reclame_btMEjb": {
+      "type": "reclame",
+      "name": "reclame",
+      "settings": {
+        "image_thema_img": "shopify://shop_images/e97199de-30db-469f-822a-dc41de62c0bf.png",
+        "url_thema0link": "",
+        "text_bekijken_1": "Bekijken"
+      }
+    },
     "category_Ci8LWf": {
       "type": "category",
       "settings": {
@@ -52,14 +61,6 @@
         "text_button_text": "Bekijken",
         "collection_collection": "ipa",
         "collection_collection_limit": 4
-      }
-    },
-    "reclame_btMEjb": {
-      "type": "reclame",
-      "name": "reclame",
-      "settings": {
-        "url_thema0link": "",
-        "text_bekijken_1": "Bekijken"
       }
     }
   },
