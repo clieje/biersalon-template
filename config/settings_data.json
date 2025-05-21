@@ -13,19 +13,39 @@
       "usp_balk": {
         "type": "usp_balk",
         "settings": {
-          "text_verzending_tekst": "Vanaf €75 gratis verzending in Nederland"
+          "text_verzending_tekst": "Vanaf €75 gratis verzending in Nederland",
+          "url_store_url": "",
+          "text_store": "Store",
+          "url_contact": ""
         }
       },
       "header": {
         "type": "header",
-        "settings": {}
+        "settings": {
+          "text_nieuwste_bieren": "Nieuwste bieren",
+          "text_sale": "Sale",
+          "text_inloggen_mobiel": "Inloggen",
+          "text_jouw_kratje": "jouw kratje",
+          "text_statiegeld_cart": "statiegeld",
+          "text_totaal": "Totaal",
+          "text_ik_ga_bestellen": "Ik ga bestellen"
+        }
       },
       "footer": {
         "type": "footer",
         "settings": {
           "text_openingstijden": "openingstijden <br>van de winkel",
           "text_dagen": "Maandag <br> Dinsdag <br> Woensdag <br> Donderdag <br> Vrijdag <br> Zaterdag <br> Zondag",
-          "text_tijden": "Gesloten <br> 12:00 - 18:00  <br> 12:00 - 18:00  <br> 12:00 - 18:00  <br> 10:00 - 18:00  <br> 10:00 - 17:00  <br> 12:00 - 17:00"
+          "text_tijden": "Gesloten <br> 12:00 - 18:00  <br> 12:00 - 18:00  <br> 12:00 - 18:00  <br> 10:00 - 18:00  <br> 10:00 - 17:00  <br> 12:00 - 17:00",
+          "text_shipping": "",
+          "text_betaalmethoden": "Betaalmethoden"
+        }
+      },
+      "age_verficiation": {
+        "type": "age_verficiation",
+        "settings": {
+          "text_ouder_dan_18_jaar": "Ben je 18 jaar of ouder?",
+          "text_access_deny": "Je bent nog niet oud genoeg om de website te bezoeken."
         }
       }
     },
