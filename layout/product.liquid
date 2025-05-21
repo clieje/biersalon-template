@@ -1,7 +1,11 @@
 <!doctype html>
 <html data-wf-page="6821afa3caec287714be69d2" data-wf-site="6821afa3caec287714be68e1" lang="{{ request.locale.iso_code }}"><head><meta charset="utf-8">
 <title>{{ page_title }}</title><meta content="{{ page_description }}" name="description">
-<meta content="{{ page_title }}" property="og:title">
+<meta content="  {% if product %}
+    {{ product.vendor }} {{ product.title }} | {{ shop.name }}
+  {% else %}
+    {{ page_title }} | {{ shop.name }}
+  {% endif %}" property="og:title">
 <meta content="{{ page_description }}" property="og:description">
 <meta content="{{ page_title }}" property="twitter:title">
 <meta content="{{ page_description }}" property="twitter:description">
