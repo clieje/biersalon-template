@@ -92,4 +92,34 @@
       }
     });
   });
+</script><script>// Functie om de datum over 7 dagen op te slaan
+  function setAgeVerificationHidden() {
+    const hideUntil = new Date();
+    hideUntil.setDate(hideUntil.getDate() + 7);
+    localStorage.setItem('ageVerifiedUntil', hideUntil.toISOString());
+  }
+  // Functie om te controleren of de leeftijdsverificatie getoond moet worden
+  function shouldShowAgeVerification() {
+    const hideUntil = localStorage.getItem('ageVerifiedUntil');
+    if (!hideUntil) return true;
+    const now = new Date();
+    const hideDate = new Date(hideUntil);
+    return now > hideDate;
+  }
+  // Hoofdcode
+  document.addEventListener('DOMContentLoaded', function () {
+    const ageVerification = document.querySelector('.age-verification');
+    const confirmButton = document.querySelector('.ikben');
+    if (shouldShowAgeVerification()) {
+      ageVerification.style.display = 'block';
+    } else {
+      ageVerification.style.display = 'none';
+    }
+    if (confirmButton) {
+      confirmButton.addEventListener('click', function () {
+        setAgeVerificationHidden();
+        ageVerification.style.display = 'none';
+      });
+    }
+  });
 </script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]},{"type":"@app"}],"settings":[{"id":"text_openingstijden","type":"text","label":"Openingstijden","default":"openingstijden <br\/>van de winkel"},{"id":"text_dagen","type":"text","label":"Dagen","default":"Maandag"},{"id":"text_tijden","type":"text","label":"Tijden","default":"Gesloten"},{"id":"text_shipping","type":"text","label":"Shipping","default":"Verzendmethoden"},{"id":"text_betaalmethoden","type":"text","label":"Betaalmethoden","default":"Betaalmethoden"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
