@@ -2,12 +2,12 @@
 {{ section.settings.text_headline }}
 </h2>
 </div></div><div class="product_button-row hide-mobile-landscape"></div></div>{% assign collection = collections['bieren'] %}
-{% assign vendor = product.vendor %}
+{% assign bierstijl = product.bierstijl %}
 {% assign productcount = 0 %}
 {% paginate collection.products by 3000 %}
     <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000"><div li-for:inside="product in collection.products" role="list" class="product_list w-dyn-items">
         {% for product in collection.products %}                            
-                            {% if product.vendor == vendor and productcount < 4 and product.available != false %}    <div li-if="product.vendor == vendor and productcount < 4 and product.available != false" role="listitem" class="product_list-item w-dyn-item">
+                            {% if product.metafilds.custom.bierstijl == bierstijl and productcount < 4 %}    <div li-if="product.metafilds.custom.bierstijl == bierstijl and productcount < 4" role="listitem" class="product_list-item w-dyn-item">
     {% render 'product_item', product: product %}
 {% assign productcount = productcount | plus: 1 %}
     </div>
