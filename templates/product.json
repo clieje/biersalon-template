@@ -33,7 +33,7 @@
       "type": "productenbierstijl",
       "name": "ProductenBierstijl",
       "settings": {
-        "text_headline": "Meer zoals {{ product.metafields.custom.bierstijl | metafield_text }}"
+        "text_headline": "meer in dezelfde stijl"
       }
     },
     "uitgelicht_2": {
