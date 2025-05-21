@@ -5,8 +5,8 @@
 {% assign vendor = product.vendor %}
 {% assign productcount  = 0 %}
 {% paginate collection.products by 3000 %}
-    <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000"><div li-for:inside="collection.products" role="list" class="product_list w-dyn-items">
-        {% for collection.products %}                            
+    <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000"><div li-for:inside="products in collection.products" role="list" class="product_list w-dyn-items">
+        {% for products in collection.products %}                            
                             {% if product.vendor == vendor and productcount < 4 and product.available != false %}    <div li-if="product.vendor == vendor and productcount < 4 and product.available != false" role="listitem" class="product_list-item w-dyn-item">
     {% render 'product_item', product: product %}
 {% productcount = productcount | plus: 1 %}
