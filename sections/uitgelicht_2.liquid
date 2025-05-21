@@ -3,7 +3,7 @@
 </h2>
 </div></div><div class="product_button-row hide-mobile-landscape"></div></div>{% assign collection = collections['bieren'] %}
 {% assign vendor = product.vendor %}
-{% assign productcount  = 0 %}
+{% assign productcount = 0 %}
 {% paginate collection.products by 3000 %}
     <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000"><div li-for:inside="products in collection.products" role="list" class="product_list w-dyn-items">
         {% for products in collection.products %}                            
