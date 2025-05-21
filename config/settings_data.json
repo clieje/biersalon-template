@@ -13,9 +13,8 @@
       "usp_balk": {
         "type": "usp_balk",
         "settings": {
-          "text_verzending_tekst": "Vanaf €75 gratis verzending in Nederland",
+          "text_verzending_tekst": "Gratis verzending binnen NL vanaf €75 · BE & DE vanaf €100",
           "url_store_url": "",
-          "text_store": "Store",
           "url_contact": ""
         }
       },
@@ -28,7 +27,8 @@
           "text_jouw_kratje": "jouw kratje",
           "text_statiegeld_cart": "statiegeld",
           "text_totaal": "Totaal",
-          "text_ik_ga_bestellen": "Ik ga bestellen"
+          "text_ik_ga_bestellen": "Ik ga bestellen",
+          "text_toegevoegd": "Toegevoegd aan je winkelwagen"
         }
       },
       "footer": {
