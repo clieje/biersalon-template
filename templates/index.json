@@ -53,6 +53,14 @@
         "collection_collection": "ipa",
         "collection_collection_limit": 4
       }
+    },
+    "reclame_btMEjb": {
+      "type": "reclame",
+      "name": "reclame",
+      "settings": {
+        "url_thema0link": "",
+        "text_bekijken_1": "Bekijken"
+      }
     }
   },
   "layout": "theme",
@@ -60,6 +68,7 @@
   "order": [
     "liquify_hero",
     "category",
+    "reclame_btMEjb",
     "category_Ci8LWf"
   ]
 }
