@@ -4,17 +4,15 @@
 </div></div><div class="product_button-row hide-mobile-landscape"></div></div>{% assign collection = collections['bieren'] %}
 {% assign vendor = product.vendor %}
 {% productcount  =0 %}
-<div li-for:inside="collection.products" li-paginate="collection.products" li-paginate:by="3000" class="product_list-wrapper w-dyn-list">
+{% paginate collection.products by 3000 %}
+    <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000"><div li-for:inside="collection.products" role="list" class="product_list w-dyn-items">
         {% for collection.products %}                            
-                            {% if product.available != false %}    <div li-if="product.available != false" role="list" class="product_list w-dyn-items">
-    {% if product.vendor == vendor and productcount < 4 %}    <div li-if="product.vendor == vendor and productcount < 4" role="listitem" class="product_list-item w-dyn-item">
+                            {% if product.vendor == vendor and productcount < 4 and product.available != false %}    <div li-if="product.vendor == vendor and productcount < 4 and product.available != false" role="listitem" class="product_list-item w-dyn-item">
     {% render 'product_item', product: product %}
 {% productcount = productcount | plus: 1 %}
     </div>
-{% endif %}    </div>
 {% endif %}
                             
-                            <div class="hide w-dyn-empty"><div>No items found.</div></div>
-                            
                     {% endfor %}    </div>
+<div class="hide w-dyn-empty"><div>No items found.</div></div></div>{% endpaginate %}
 </div></div></div> {% schema %} {"tag":"section","name":"Uitgelicht 2","class":"section_product","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Short heading here"}],"presets":[{"name":"Uitgelicht 2","category":"Liquify","blocks":[]}]} {% endschema %}
