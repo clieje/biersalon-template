@@ -779,6 +779,11 @@ figcaption {
   max-width: 1350px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+}
+
+.container-large.ss {
+  min-height: 500px;
 }
 
 .form_message-error {
@@ -4004,7 +4009,7 @@ figcaption {
   z-index: -2;
   background-color: var(--base-color-neutral--white);
   border-radius: 5px 5px 0 0;
-  margin-top: 5px;
+  margin-top: 0;
   padding-top: 0;
 }
 
@@ -5887,6 +5892,52 @@ figcaption {
   height: 100%;
 }
 
+.section-reclame {
+  background-color: var(--base-color-neutral--white);
+  padding: 0 25px 50px;
+}
+
+.img_bg {
+  border-radius: 10px;
+  position: absolute;
+  inset: 0%;
+  overflow: hidden;
+}
+
+.img_1 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0%;
+}
+
+.overlay {
+  z-index: 2;
+  background-color: #00000057;
+  position: absolute;
+  inset: 0%;
+}
+
+.reclame-link {
+  z-index: 5;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 500px;
+  min-height: 100%;
+  padding: 75px;
+  display: flex;
+  position: relative;
+}
+
+.white-par {
+  color: var(--base-color-neutral--white);
+  max-width: 550px;
+}
+
 @media screen and (max-width: 991px) {
   .padding-medium {
     padding: 1.5rem;
@@ -5933,6 +5984,11 @@ figcaption {
     max-width: none;
   }
 
+  .padding-global._3 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .li-styleguide_1-col {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
@@ -5949,6 +6005,10 @@ figcaption {
   .padding-section-large {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+
+  .container-large.ss {
+    min-height: 400px;
   }
 
   .button.is-link.hide-tablet {
@@ -6849,9 +6909,13 @@ figcaption {
     margin-top: 0;
   }
 
-  .container-large-3 {
+  .container-large-3, .section-reclame {
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .reclame-link {
+    height: 500px;
   }
 }
 
@@ -7407,6 +7471,15 @@ figcaption {
 
   .heading-style-h3-2 {
     font-size: 1.5rem;
+  }
+
+  .section-reclame {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .reclame-link {
+    padding: 25px;
   }
 }
 
