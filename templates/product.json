@@ -29,17 +29,17 @@
         "text_fysieke_store": "Fysieke store"
       }
     },
-    "uitgelicht_2": {
-      "type": "uitgelicht_2",
-      "settings": {
-        "text_headline": "Meer van dezelfde  brouwerij"
-      }
-    },
     "productenbierstijl_VY4nXL": {
       "type": "productenbierstijl",
       "name": "ProductenBierstijl",
       "settings": {
         "text_headline": "Meer zoals {{ product.metafields.custom.bierstijl | metafield_text }}"
+      }
+    },
+    "uitgelicht_2": {
+      "type": "uitgelicht_2",
+      "settings": {
+        "text_headline": "Meer van dezelfde  brouwerij"
       }
     }
   },
@@ -47,7 +47,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "product_hero",
-    "uitgelicht_2",
-    "productenbierstijl_VY4nXL"
+    "productenbierstijl_VY4nXL",
+    "uitgelicht_2"
   ]
 }
