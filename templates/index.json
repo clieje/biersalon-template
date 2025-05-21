@@ -64,27 +64,6 @@
         "collection_collection": "ipa",
         "collection_collection_limit": 8
       }
-    },
-    "1747834681b641d051": {
-      "type": "apps",
-      "blocks": {
-        "instafeed_app_block_CUGVYC": {
-          "type": "shopify://apps/instafeed/blocks/app-block/5c329ba9-407e-40ec-a145-431c886f5df9",
-          "settings": {
-            "heading_font": "helvetica_n4",
-            "heading_size": 20,
-            "heading_alignment": "center",
-            "feed_width": 100,
-            "section_top_padding": 0,
-            "section_bottom_padding": 0,
-            "html_area": ""
-          }
-        }
-      },
-      "block_order": [
-        "instafeed_app_block_CUGVYC"
-      ],
-      "settings": {}
     }
   },
   "layout": "theme",
@@ -93,7 +72,6 @@
     "liquify_hero",
     "category",
     "reclame_btMEjb",
-    "1747834681b641d051",
     "category_Ci8LWf"
   ]
 }
