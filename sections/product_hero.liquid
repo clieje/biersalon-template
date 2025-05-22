@@ -74,7 +74,7 @@
 <template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="add-to--pp">
         <input class="form-input w-input" max="product.variants.first.inventory_quantity" maxlength="256" name="quantity" li-element="add-to-cart-quantity" data-name="Quantity" min="1" placeholder="1" type="number" id="quantity" x-model="quantity">
-<div li-element="add-to-cart" class="icon-btn yellow" @click="addToCart($event, true)" :disabled="!addToCartButton"><div class="_16-txt">
+<div li-element="add-to-cart" data-w-id="0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c134" class="icon-btn yellow" @click="addToCart($event, true)" :disabled="!addToCartButton"><div class="_16-txt">
 {{ section.settings.text_in_winkelmand }}
 </div>
 <div class="incircle-brn"><div class="arrow_svg-2 yellow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 10.047 8.199"><g id="arrow" transform="translate(-0.5 -0.293)"><path id="Path_13" data-name="Path 13" d="M1,4.393h9.047M6.654,1l3.393,3.393L6.654,7.785" fill="none" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"></path></g></svg></div></div></div>        </div>
