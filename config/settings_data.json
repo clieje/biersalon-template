@@ -13,7 +13,7 @@
       "usp_balk": {
         "type": "usp_balk",
         "settings": {
-          "text_verzending_tekst": "Gratis verzending binnen NL vanaf €75 · BE & DE vanaf €100",
+          "text_verzending_tekst": "Gratis verzending · NL vanaf €75 · BE & DE vanaf €100",
           "url_store_url": "",
           "url_contact": ""
         }
@@ -27,6 +27,8 @@
           "text_jouw_kratje": "jouw kratje",
           "text_statiegeld_cart": "statiegeld",
           "text_totaal": "Totaal",
+          "text_leeftijd_extra_tekst": "Wij verkopen alleen alcohol aan personen van 18 jaar of ouder. De PostNL-bezorger of het afleverpunt controleert je leeftijd bij levering.",
+          "text_ik_verklaar": "Ik verklaar dat ik 18 jaar of ouder ben.",
           "text_ik_ga_bestellen": "Ik ga bestellen",
           "text_toegevoegd": "Toegevoegd aan je winkelwagen"
         }
@@ -49,13 +51,6 @@
         }
       }
     },
-    "content_for_index": [],
-    "blocks": {
-      "3140817623390692025": {
-        "type": "shopify://apps/na-age-verification/blocks/agechecker_y1K8NR3dvv/15fad4c9-4ba9-4c27-8e6c-1f214a81924f",
-        "disabled": false,
-        "settings": {}
-      }
-    }
+    "content_for_index": []
   }
 }
