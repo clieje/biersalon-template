@@ -24,6 +24,8 @@
 {{ product.metafields.custom.landen }}
 </div><div class="dot">·</div><div li-object:text="product.metafields.custom.abv" class="small-text">
 {{ product.metafields.custom.abv }}
+</div><div class="dot">·</div><div li-object:text="product.metafields.custom.bierstijl" class="small-text">
+{{ product.metafields.custom.bierstijl }}
 </div>    </div>
 {% endif %}</a><div class="spacing"></div><div class="margin-top-auto-2"><div class="product-item_form-wrapper-2"><div class="product-form w-form"><form id="wf-form-Add-to-cart" name="wf-form-Add-to-cart" data-name="Add to cart" method="get" class="add-to-cart-element" data-wf-page-id="6821afa3caec287714be69d2" data-wf-element-id="54e08586-06d4-f462-ea27-54ba9fcd26bd"><div class="product-item_price-2"><div li-object="product.compare_at_price | money" class="price-text compare">{{ product.compare_at_price | money }}</div><div li-object="product.price | money" class="price-text">{{ product.price | money }}</div></div>{% if product.available == true %}    <div li-if="product.available == true" class="product-buy-wrapper">
     <input class="quan w-input" max="product.variants.first.inventory_quantity" maxlength="256" name="field" li-element="add-to-cart-quantity" data-name="Field" min="1" placeholder="1" valu="1" type="number" id="field" x-model="quantity">
