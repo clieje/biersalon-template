@@ -50,7 +50,7 @@
       "settings": {
         "image_thema_img": "shopify://shop_images/website_bieren_header_5f3b7704-8e8a-4a0d-9a17-c0edbd092606.jpg",
         "url_thema0link": "https://www.facebook.com/groups/1496264194051372",
-        "text_headline_reclame": "Haantje de <br> voorste?",
+        "text_headline_reclame": "Haantje de  voorste?",
         "text_reclame_paragraph": "Als echte vriend delen wij exclusieve pre-orders met jou. Voor echte vrienden gaan we door het vuur dus we zetten graag de lekkerste speciaalbieren achter slot en grendel totdat jij ze komt ophalen bij De Biersalon.",
         "text_bekijken_1": "Vriend worden"
       }
@@ -62,7 +62,17 @@
         "url_button_link": "shopify://collections/ipa",
         "text_button_text": "Bekijken",
         "collection_collection": "ipa",
-        "collection_collection_limit": 8
+        "collection_collection_limit": 4
+      }
+    },
+    "category_NMUgMW": {
+      "type": "category",
+      "settings": {
+        "text_headline": "De mooiste Barrel Aged bieren",
+        "url_button_link": "shopify://collections/barrel-aged",
+        "text_button_text": "Bekijken",
+        "collection_collection": "barrel-aged",
+        "collection_collection_limit": 4
       }
     }
   },
@@ -72,6 +82,7 @@
     "liquify_hero",
     "category",
     "reclame_btMEjb",
-    "category_Ci8LWf"
+    "category_Ci8LWf",
+    "category_NMUgMW"
   ]
 }

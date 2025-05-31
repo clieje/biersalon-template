@@ -13,9 +13,7 @@
       "usp_balk": {
         "type": "usp_balk",
         "settings": {
-          "text_verzending_tekst": "Gratis verzending · NL vanaf €75 · BE & DE vanaf €100",
-          "url_store_url": "",
-          "url_contact": ""
+          "text_verzending_tekst": "Gratis verzending · NL vanaf €75 · BE & DE vanaf €100"
         }
       },
       "header": {
