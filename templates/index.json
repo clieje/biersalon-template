@@ -49,10 +49,10 @@
       "name": "reclame",
       "settings": {
         "image_thema_img": "shopify://shop_images/website_bieren_header_5f3b7704-8e8a-4a0d-9a17-c0edbd092606.jpg",
-        "url_thema0link": "https://www.facebook.com/groups/1496264194051372",
-        "text_headline_reclame": "Haantje de  voorste?",
-        "text_reclame_paragraph": "Als echte vriend delen wij exclusieve pre-orders met jou. Voor echte vrienden gaan we door het vuur dus we zetten graag de lekkerste speciaalbieren achter slot en grendel totdat jij ze komt ophalen bij De Biersalon.",
-        "text_bekijken_1": "Vriend worden"
+        "url_thema0link": "shopify://collections/vaderdag",
+        "text_headline_reclame": "Heb jij al iets voor vaderdag?",
+        "text_reclame_paragraph": "15 juni vaderdag! Wij hebben alvast een mooie selectie gemaakt van de allerlekkerste bieren voor de allerliefste papa!",
+        "text_bekijken_1": "Bekijken"
       }
     },
     "category_Ci8LWf": {
