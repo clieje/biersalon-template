@@ -12,7 +12,7 @@
     "liquify_hero": {
       "type": "liquify_hero",
       "settings": {
-        "url_categorie_link": "/collections/bieren?sort_by=created-descending",
+        "url_categorie_link": "shopify://collections/bieren-1",
         "image_afbeelding_1": "shopify://shop_images/681091602fa8792cd54edda7_newbg.webp",
         "text_headline_1": "Naar alle bieren",
         "text_bekijken_1": "Bekijken",
