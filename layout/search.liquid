@@ -37,7 +37,21 @@
 }
 </style><meta name="theme-color" content="#000" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#fff" media="(prefers-color-scheme: dark)">
-<script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
+<script>document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+      const scores = document.querySelectorAll('.score-text');
+      const bars = document.querySelectorAll('.progress-bar');
+      // Zorg dat het aantal elementen gelijk is
+      for (let i = 0; i < scores.length && i < bars.length; i++) {
+        const score = parseFloat(scores[i].textContent);
+        if (!isNaN(score)) {
+          const percentage = score * 20;
+          bars[i].style.width = percentage + '%';
+        }
+      }
+    }, 100); // delay indien nodig voor laadtijd
+  });
+</script><script src="{{ '_helper.js' | asset_url }}" type="text/javascript"></script>{{ content_for_header }}</head>
 <body li-page="search">
 
 <div class="page-wrapper">{% render 'global_styles' %}
