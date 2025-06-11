@@ -163,4 +163,17 @@
     // Als het geen geldig JSON is, doe niets
   }
 });
+</script><script>document.addEventListener("DOMContentLoaded", function () {
+    // Selecteer het element met de score
+    const scoreElement = document.querySelector('.score-text');
+    const targetDiv = document.querySelector('.div-block-3');
+    if (scoreElement && targetDiv) {
+      // Haal de tekstwaarde op en converteer naar een nummer
+      const scoreValue = parseFloat(scoreElement.textContent.trim());
+      // Verberg de div als de score 0 is
+      if (scoreValue === 0) {
+        targetDiv.style.display = 'none';
+      }
+    }
+  });
 </script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]}],"settings":[{"id":"text_openingstijden","type":"text","label":"Openingstijden","default":"openingstijden <br\/>van de winkel"},{"id":"text_dagen","type":"text","label":"Dagen","default":"Maandag"},{"id":"text_tijden","type":"text","label":"Tijden","default":"Gesloten"},{"id":"text_shipping","type":"text","label":"Shipping","default":"Verzendmethoden"},{"id":"text_betaalmethoden","type":"text","label":"Betaalmethoden","default":"Betaalmethoden"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
