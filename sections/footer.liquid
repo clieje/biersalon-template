@@ -170,7 +170,7 @@
       const scoreValue = parseFloat(scoreText);
       if (!isNaN(scoreValue) && scoreValue === 0) {
         // Zoek de bijbehorende div-block-3 binnen dezelfde productkaart
-        const productCard = scoreElement.closest('.product-item_left22'); // pas aan indien nodig
+        const productCard = scoreElement.closest('.product-item_text-link22'); // pas aan indien nodig
         const targetDiv = productCard?.querySelector('.div-block-3');
         if (targetDiv) {
           targetDiv.style.display = 'none';
