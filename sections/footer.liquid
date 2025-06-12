@@ -164,16 +164,18 @@
   }
 });
 </script><script>document.addEventListener("DOMContentLoaded", function () {
-    const scoreElement = document.querySelector('.score-text');
-    const targetDiv = document.querySelector('.div-block-3');
-    if (scoreElement && targetDiv) {
-      // Haal de tekstwaarde op, trim witruimte en converteer naar een float
+    const scoreElements = document.querySelectorAll('.score-text');
+    scoreElements.forEach(scoreElement => {
       const scoreText = scoreElement.textContent.trim();
       const scoreValue = parseFloat(scoreText);
-      // Controleer of de waarde exact 0 is (dus ook 0.0, "0", "0.0", enz.)
+      console.log('Scoretekst:', scoreText, 'Geparsed:', scoreValue);
       if (!isNaN(scoreValue) && scoreValue === 0) {
-        targetDiv.style.display = 'none';
+        const parent = scoreElement.closest('.some-wrapper'); // vervang indien nodig
+        const targetDiv = parent.querySelector('.div-block-3');
+        if (targetDiv) {
+          targetDiv.style.display = 'none';
+        }
       }
-    }
+    });
   });
 </script></div> {% schema %} {"tag":"footer","name":"footer","class":"section_footer","blocks":[{"name":"Lieferung-icon","type":"lieferung-icon","settings":[{"id":"image_icon","type":"image_picker","label":"icon"}]}],"settings":[{"id":"text_openingstijden","type":"text","label":"Openingstijden","default":"openingstijden <br\/>van de winkel"},{"id":"text_dagen","type":"text","label":"Dagen","default":"Maandag"},{"id":"text_tijden","type":"text","label":"Tijden","default":"Gesloten"},{"id":"text_shipping","type":"text","label":"Shipping","default":"Verzendmethoden"},{"id":"text_betaalmethoden","type":"text","label":"Betaalmethoden","default":"Betaalmethoden"}],"presets":[{"name":"footer","category":"Liquify","blocks":[{"type":"lieferung-icon"}]}]} {% endschema %}
