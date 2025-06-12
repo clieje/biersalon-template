@@ -164,14 +164,14 @@
   }
 });
 </script><script>document.addEventListener("DOMContentLoaded", function () {
-    // Selecteer het element met de score
     const scoreElement = document.querySelector('.score-text');
     const targetDiv = document.querySelector('.div-block-3');
     if (scoreElement && targetDiv) {
-      // Haal de tekstwaarde op en converteer naar een nummer
-      const scoreValue = parseFloat(scoreElement.textContent.trim());
-      // Verberg de div als de score 0 is
-      if (scoreValue === 0) {
+      // Haal de tekstwaarde op, trim witruimte en converteer naar een float
+      const scoreText = scoreElement.textContent.trim();
+      const scoreValue = parseFloat(scoreText);
+      // Controleer of de waarde exact 0 is (dus ook 0.0, "0", "0.0", enz.)
+      if (!isNaN(scoreValue) && scoreValue === 0) {
         targetDiv.style.display = 'none';
       }
     }

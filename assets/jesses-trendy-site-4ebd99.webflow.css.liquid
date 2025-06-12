@@ -4978,7 +4978,7 @@ figcaption {
 }
 
 .product-item_image-2 {
-  width: 50%;
+  width: 75%;
   height: 100%;
   position: absolute;
   inset: 0% auto;
@@ -6178,6 +6178,20 @@ figcaption {
 .image-2 {
   max-width: 125px;
   margin-top: 50px;
+}
+
+@media screen and (min-width: 1920px) {
+  .container-large {
+    max-width: 1650px;
+  }
+
+  .filter_product-list, .product_list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .nav-container, .main-hero, .product-header-component, .usp-container, .div-block-21, .container-large-3, .header-1350 {
+    max-width: 1650px;
+  }
 }
 
 @media screen and (max-width: 991px) {
