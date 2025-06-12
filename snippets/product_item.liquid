@@ -4,7 +4,7 @@
     Niet op voorraad    </div>
 {% endif %}{% if product.compare_at_price_max > product.price %}    <div li-if="product.compare_at_price_max > product.price" class="product-item_tag-2 is-yellow">
     Sale    </div>
-{% endif %}</div></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link-2 w-inline-block"><div class="product-item_left-2"><div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div><div li-object="product.title" class="heading-style-h4-2 product">{{ product.title }}</div></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
+{% endif %}</div></div><a li-object:href="product.url" href="{{ product.url }}" class="product-item_text-link-2 w-inline-block"><div class="product-item_left22"><div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div><div li-object="product.title" class="heading-style-h4-2 product">{{ product.title }}</div></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
     <div class="rt_text"><div class="small-text">Untappd</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
     <div li-object:text="product.metafields.custom.rating_count" class="small-text semi aantalr">
 {{ product.metafields.custom.rating_count }}

@@ -165,13 +165,13 @@
 });
 </script><script>document.addEventListener("DOMContentLoaded", function () {
     const scoreElements = document.querySelectorAll('.score-text');
-    scoreElements.forEach(scoreElement => {
+    scoreElements.forEach(function (scoreElement) {
       const scoreText = scoreElement.textContent.trim();
       const scoreValue = parseFloat(scoreText);
-      console.log('Scoretekst:', scoreText, 'Geparsed:', scoreValue);
       if (!isNaN(scoreValue) && scoreValue === 0) {
-        const parent = scoreElement.closest('.some-wrapper'); // vervang indien nodig
-        const targetDiv = parent.querySelector('.div-block-3');
+        // Zoek de bijbehorende div-block-3 binnen dezelfde productkaart
+        const productCard = scoreElement.closest('.product-item_left22'); // pas aan indien nodig
+        const targetDiv = productCard?.querySelector('.div-block-3');
         if (targetDiv) {
           targetDiv.style.display = 'none';
         }
