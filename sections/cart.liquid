@@ -28,7 +28,8 @@
 {% endfor %}</div><div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0a-14be69b4" class="cart_wrapper-right"><div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0b-14be69b4" class="cart_table outline-solid-1"><div class="cart_grid is-header w-hidden-tiny"><div id="w-node-e70215e6-46ed-17af-2aa7-195241f33b0d-14be69b4" class="cart_table-header"><p class="text-size-regular">
 {{ section.settings.text_jouw_bestelling }}
 </p>
-</div></div><div class="cart_content"><div class="cart_wrapper"><div class="cart_details-wrapper"><div class="text-size-regular">
+</div></div><div class="cart_content"><div class="cart_wrapper"><input type="submit" data-wait="Please wait..." class="update-cart-bb w-button" value="Update cart">
+<div class="cart_details-wrapper"><div class="text-size-regular">
 {{ section.settings.text_totaal_incl_btw }}
 </div>
 <div class="cart_details-price">{% if cart.total_discounts > 0 %}    <div li-if="cart.total_discounts > 0">
@@ -41,7 +42,6 @@
 {{ section.settings.text_ik_verklaar }}
 </span>
 </label><input type="submit" data-wait="Please wait..." id="cartbutton" class="button w-button" value="Checkout" name="checkout">
-<input type="submit" data-wait="Please wait..." class="button is-outline w-button" value="Update cart">
 </div></div></div><div class="checkout-logos"><img sizes="(max-width: 1040px) 100vw, 1040px" srcset="{{ 'ideal-logo-1024_1ideal-logo-1024.webp' | asset_url }} 500w, {{ 'ideal-logo-1024_1ideal-logo-1024.webp' | asset_url }} 800w, {{ 'ideal-logo-1024_1ideal-logo-1024.webp' | asset_url }} 1040w" alt="" src="{{ 'ideal-logo-1024_1ideal-logo-1024.webp' | asset_url }}" loading="lazy" class="ideal">
 <img loading="lazy" src="{{ 'Apple-Pay-Card.svg' | asset_url }}" alt="" class="apple-pay">
 <img loading="lazy" src="{{ 'Mastercard-Logo.wine.svg' | asset_url }}" alt="" class="mastercard">
