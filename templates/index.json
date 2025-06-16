@@ -38,7 +38,7 @@
       "type": "category",
       "settings": {
         "text_headline": "onze nieuwste bieren",
-        "url_button_link": "/collections/bieren?sort_by=created-descending",
+        "url_button_link": "/collections/bieren-1?sort_by=created-descending",
         "text_button_text": "Bekijken",
         "collection_collection": "producten-op-voorraad",
         "collection_collection_limit": 8
