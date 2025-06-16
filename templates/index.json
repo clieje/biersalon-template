@@ -74,6 +74,27 @@
         "collection_collection": "barrel-aged",
         "collection_collection_limit": 4
       }
+    },
+    "17500612053dab0ea1": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_p38dxV": {
+          "type": "shopify://apps/instafeed/blocks/app-block/5c329ba9-407e-40ec-a145-431c886f5df9",
+          "settings": {
+            "heading_font": "helvetica_n4",
+            "heading_size": 20,
+            "heading_alignment": "center",
+            "feed_width": 100,
+            "section_top_padding": 0,
+            "section_bottom_padding": 0,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_p38dxV"
+      ],
+      "settings": {}
     }
   },
   "layout": "theme",
@@ -83,6 +104,7 @@
     "category",
     "reclame_btMEjb",
     "category_Ci8LWf",
-    "category_NMUgMW"
+    "category_NMUgMW",
+    "17500612053dab0ea1"
   ]
 }
