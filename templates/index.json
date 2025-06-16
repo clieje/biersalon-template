@@ -87,7 +87,7 @@
             "feed_width": 95,
             "section_top_padding": 0,
             "section_bottom_padding": 0,
-            "html_area": ""
+            "html_area": "<style>\n.instagenie-grid-container {\nborder-radius: 13px;\n}\n</style>"
           }
         }
       },
