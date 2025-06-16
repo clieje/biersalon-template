@@ -95,6 +95,25 @@
         "instafeed_app_block_p38dxV"
       ],
       "settings": {}
+    },
+    "reviews_ghK6T6": {
+      "type": "reviews",
+      "name": "reviews",
+      "settings": {
+        "text_headline": "wat klanten over ons zeggen",
+        "text_review_1_naam": "nienke schut",
+        "text_review_1_tekst": "Dit is mijn favoriete bierwinkel! Ruim aanbod, super goede service en altijd net iets goedkoper dan de rest. Roel is altijd bereid mee te denken of biertjes apart te zetten en hij verkoopt natuurlijk gewoon heel erg veel lekker bier. Zeker een aanrader, cheers! 🍻",
+        "text_review_2_naam": "nienke schut",
+        "text_review_2_tekst": "Dit is mijn favoriete bierwinkel! Ruim aanbod, super goede service en altijd net iets goedkoper dan de rest. Roel is altijd bereid mee te denken of biertjes apart te zetten en hij verkoopt natuurlijk gewoon heel erg veel lekker bier. Zeker een aanrader, cheers! 🍻",
+        "text_review_3_naam": "nienke schut",
+        "text_review_3_tekst": "Dit is mijn favoriete bierwinkel! Ruim aanbod, super goede service en altijd net iets goedkoper dan de rest. Roel is altijd bereid mee te denken of biertjes apart te zetten en hij verkoopt natuurlijk gewoon heel erg veel lekker bier. Zeker een aanrader, cheers! 🍻",
+        "text_review_4_naam": "nienke schut",
+        "text_review_4_tekst": "Dit is mijn favoriete bierwinkel! Ruim aanbod, super goede service en altijd net iets goedkoper dan de rest. Roel is altijd bereid mee te denken of biertjes apart te zetten en hij verkoopt natuurlijk gewoon heel erg veel lekker bier. Zeker een aanrader, cheers! 🍻",
+        "text_review_5_naam": "nienke schut",
+        "text_review_5_tekst": "Dit is mijn favoriete bierwinkel! Ruim aanbod, super goede service en altijd net iets goedkoper dan de rest. Roel is altijd bereid mee te denken of biertjes apart te zetten en hij verkoopt natuurlijk gewoon heel erg veel lekker bier. Zeker een aanrader, cheers! 🍻",
+        "text_review_6_naam": "nienke schut",
+        "text_review_6_tekst": "Dit is mijn favoriete bierwinkel! Ruim aanbod, super goede service en altijd net iets goedkoper dan de rest. Roel is altijd bereid mee te denken of biertjes apart te zetten en hij verkoopt natuurlijk gewoon heel erg veel lekker bier. Zeker een aanrader, cheers! 🍻"
+      }
     }
   },
   "layout": "theme",
@@ -105,6 +124,7 @@
     "reclame_btMEjb",
     "category_Ci8LWf",
     "category_NMUgMW",
-    "17500612053dab0ea1"
+    "17500612053dab0ea1",
+    "reviews_ghK6T6"
   ]
 }
