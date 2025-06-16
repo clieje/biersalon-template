@@ -96,9 +96,10 @@
     },
     "untappd_reviews_FGbtqU": {
       "type": "untappd_reviews",
+      "disabled": true,
       "name": "Untappd Reviews",
       "settings": {
-        "text_headline_1": "Ingechecktbij Untappd",
+        "text_headline_1": "Ingecheckt<br>bij Untappd",
         "url_untappd_link_1": "",
         "text_untappd_naam_account_1": "Roel van der Donk",
         "text_untappd_biernaam_1": "nienke schut",
