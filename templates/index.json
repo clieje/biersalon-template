@@ -87,7 +87,7 @@
             "feed_width": 100,
             "section_top_padding": 0,
             "section_bottom_padding": 0,
-            "html_area": ""
+            "html_area": "<style>\n  .instagenie-list {\n    max-width: 900px;\n  }\n</style>"
           }
         }
       },
