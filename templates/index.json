@@ -94,6 +94,28 @@
         "text_review_6_tekst": "Kundige eigenaar, altijd goed advies. En naar mijn mening slaag je hier altijd"
       }
     },
+    "untappd_reviews_FGbtqU": {
+      "type": "untappd_reviews",
+      "name": "Untappd Reviews",
+      "settings": {
+        "text_headline_1": "Ingechecktbij Untappd",
+        "url_untappd_link_1": "",
+        "text_untappd_naam_account_1": "Roel van der Donk",
+        "text_untappd_biernaam_1": "nienke schut",
+        "text_untappd_score_1": "0.0",
+        "text_untappd_datum_1": "30-06-2025",
+        "url_untappd_link_2": "",
+        "text_untappd_naam_account_2": "Roel van der Donk",
+        "text_untappd_biernaam_2": "nienke schut",
+        "text_untappd_score_2": "0.0",
+        "text_untappd_datum_2": "30-06-2025",
+        "url_untappd_link_3": "",
+        "text_untappd_naam_account_3": "Roel van der Donk",
+        "text_untappd_biernaam_3": "nienke schut",
+        "text_untappd_score_3": "0.0",
+        "text_untappd_datum_3": "30-06-2025"
+      }
+    },
     "17500612053dab0ea1": {
       "type": "apps",
       "blocks": {
@@ -125,6 +147,7 @@
     "category_Ci8LWf",
     "category_NMUgMW",
     "reviews_ghK6T6",
+    "untappd_reviews_FGbtqU",
     "17500612053dab0ea1"
   ]
 }
