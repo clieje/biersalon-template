@@ -123,6 +123,13 @@
         "text_untappd_datum_3": "30-06-2025"
       }
     },
+    "titel_instagram_kxb3iA": {
+      "type": "titel_instagram",
+      "name": "Titel Instagram",
+      "settings": {
+        "text_headline_1": "Volg ons op@debiersalon"
+      }
+    },
     "17500612053dab0ea1": {
       "type": "apps",
       "blocks": {
@@ -161,6 +168,7 @@
     "category_NMUgMW",
     "reviews_ghK6T6",
     "untappd_reviews_FGbtqU",
+    "titel_instagram_kxb3iA",
     "17500612053dab0ea1"
   ]
 }
