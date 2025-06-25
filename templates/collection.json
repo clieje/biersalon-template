@@ -1,16 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "collection_hero": {
-            "type": "collection_hero"
-        },
-        "collection_products": {
-            "type": "collection_products"
-        }
+  "sections": {
+    "collection_hero": {
+      "type": "collection_hero",
+      "settings": {}
     },
-    "layout": "collection",
-    "wrapper": "main.main-wrapper",
-    "order": [
-        "collection_hero",
-        "collection_products"
-    ]
+    "collection_products": {
+      "type": "collection_products",
+      "settings": {
+        "url_india_pale_ale": "shopify://collections/india-pale-ale",
+        "url_stour_porter_barleywine": "shopify://collections/stout-porter-barleywine-1",
+        "url_blond_dubbel_tripel": "shopify://collections/blond-dubbel-tripel-quadrupel-1",
+        "url_barrel_aged": "shopify://collections/barrel-aged-1",
+        "url_wit_weizen_pils": "shopify://collections/wit-weizen-pils-1",
+        "url_wild_saison_fruit": "shopify://collections/wild-saison-fruit-1",
+        "url_mede_cider": "shopify://collections/mede-cider-1",
+        "url_overig": "shopify://collections/overige-bierstijlen-1",
+        "text_bieren_gevonden": "Bieren gevonden",
+        "text_back": "Back",
+        "text_back_1": "Back",
+        "text_next_1": "Next",
+        "text_next": "Next"
+      }
+    }
+  },
+  "layout": "collection",
+  "wrapper": "main.main-wrapper",
+  "order": [
+    "collection_hero",
+    "collection_products"
+  ]
 }
