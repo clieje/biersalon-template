@@ -35,6 +35,17 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "lieferung_icon_gWdThR": {
+            "type": "lieferung-icon",
+            "settings": {
+              "image_icon": "shopify://shop_images/PostNL_logo_transparant.png"
+            }
+          }
+        },
+        "block_order": [
+          "lieferung_icon_gWdThR"
+        ],
         "settings": {
           "text_openingstijden": "openingstijden <br>van de winkel",
           "text_dagen": "Maandag <br> Dinsdag <br> Woensdag <br> Donderdag <br> Vrijdag <br> Zaterdag <br> Zondag",
