@@ -48,10 +48,10 @@
       "type": "reclame",
       "name": "reclame",
       "settings": {
-        "image_thema_img": "shopify://shop_images/SnapInsta.to_481141628_18035213342569700_4026668857887794261_n.webp",
-        "url_thema0link": "shopify://collections/wild-saison-fruit-1",
-        "text_headline_reclame": "The Sun is shining!",
-        "text_reclame_paragraph": "Tijd voor de lekkerste fruitige bieren! Bekijk onze zomerse selectie.",
+        "image_thema_img": "shopify://shop_images/Halloween_Beers_banner.jpg",
+        "url_thema0link": "shopify://collections/halloween",
+        "text_headline_reclame": "No tricks, just treats!",
+        "text_reclame_paragraph": "Our Halloween beers bring bold flavors, spooky vibes, and a touch of mischief. Perfect for ghostly gatherings or a cozy night with your favorite creatures of the night.",
         "text_bekijken_1": "Bekijken"
       }
     },
