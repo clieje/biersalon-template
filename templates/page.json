@@ -11,14 +11,38 @@
   "sections": {
     "default": {
       "type": "default",
+      "disabled": true,
       "settings": {
         "image_main_header": "shopify://shop_images/IMG_0799-scaled_1.webp"
+      }
+    },
+    "reclame_fNFb3m": {
+      "type": "reclame",
+      "name": "reclame",
+      "settings": {
+        "url_thema0link": "shopify://collections/bieren-1",
+        "text_headline_reclame": "Untappd toppers",
+        "text_reclame_paragraph": "Deze bieren scoren stuk voor stuk een 4+ op je favoriete bierapp! In onze Untappd Toppers-collectie vind je bieren die wereldwijd worden gewaardeerd door liefhebbers en experts. Van frisse IPA’s en karaktervolle stouts tot bijzondere ambachtelijke specials, alleen de beste bieren maken het tot deze selectie.",
+        "text_bekijken_1": "Bekijk al onze bieren"
+      }
+    },
+    "category_jzUerW": {
+      "type": "category",
+      "name": "Category",
+      "settings": {
+        "text_headline": "Onze hoogst scorende bieren",
+        "url_button_link": "shopify://collections/untappd-toppers",
+        "text_button_text": "Alle Untappd topper",
+        "collection_collection": "untappd-toppers",
+        "collection_collection_limit": 12
       }
     }
   },
   "layout": "page",
   "wrapper": "main.main-wrapper",
   "order": [
-    "default"
+    "default",
+    "reclame_fNFb3m",
+    "category_jzUerW"
   ]
 }
