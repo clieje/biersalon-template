@@ -20,6 +20,7 @@
       "type": "reclame",
       "name": "reclame",
       "settings": {
+        "image_thema_img": "shopify://shop_images/Untappd_Logotype_White_RGB.png",
         "url_thema0link": "shopify://collections/bieren-1",
         "text_headline_reclame": "Untappd toppers",
         "text_reclame_paragraph": "Deze bieren scoren stuk voor stuk een 4+ op je favoriete bierapp! In onze Untappd Toppers-collectie vind je bieren die wereldwijd worden gewaardeerd door liefhebbers en experts. Van frisse IPA’s en karaktervolle stouts tot bijzondere ambachtelijke specials, alleen de beste bieren maken het tot deze selectie.",
