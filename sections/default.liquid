@@ -1,2 +1,37 @@
-<div class="div-block-28"><div class="header-1350"><h1 li-object="page.title" class="heading-style-h1">{{ page.title }}</h1><div class="background-img"><img src="{{ section.settings.image_main_header | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_main_header.alt }}" class="image">
-<div class="header_overlay-layer"></div></div></div></div><div class="padding-global padding-section-medium"><div class="container-large-3"><div class="default_wrapper"><div li-object="page.content" class="text-rich-text whie w-richtext">{{ page.content }}</div></div></div></div> {% schema %} {"tag":"section","name":"Default","class":"section_default","settings":[{"id":"image_main_header","type":"image_picker","label":"Main-header"}],"presets":[{"name":"Default","category":"Liquify","blocks":[]}]} {% endschema %}
+<div class="div-block-28">
+          <div class="header-1350">
+            <h1 li-object="page.title" class="heading-style-h1">{{ page.title }}</h1>
+            <div class="background-img">{% if section.settings.image_main_header %}
+{{ section.settings.image_main_header | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'image' }}
+{% else %}
+<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image">
+{% endif %}
+              <div class="header_overlay-layer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="padding-global padding-section-medium">
+          <div class="container-large-3">
+            <div class="default_wrapper">
+              <div li-object="page.content" class="text-rich-text whie w-richtext">{{ page.content }}</div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Default",
+    "class": "section_default",
+    "settings": [
+        {
+            "id": "image_main_header",
+            "type": "image_picker",
+            "label": "Main-header"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Default",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
