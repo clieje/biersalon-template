@@ -1,10 +1,17 @@
-<div class="padding-global padding-section-large"><div class="container-large untappd"><h1 class="h1-style black">
+<div class="padding-global padding-section-large">
+          <div class="container-large untappd">
+            <h1 class="h1-style black">
 {{ section.settings.text_headline_1 }}
 </h1>
-<div class="untappd-grid"><a href="{{ section.settings.url_untappd_link_1 }}" class="untappd-rating w-inline-block"> <div class="afbeelding_icon"><img src="{{ section.settings.image_untappd_afbeelding_1 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_untappd_afbeelding_1.alt }}" class="abs-untappd"><div class="naam-untappd">{{ section.settings.text_untappd_naam_account_1 }}</div></div><div class="div-block-38"><div class="heading-style-h4-2 product">{{ section.settings.text_untappd_biernaam_1 }}</div><div class="untappd_meta"><div class="rating-wrapper"><div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div><div class="progress-bar voortgang"></div></div><div class="rt_text">{% if product.metafields.custom.rating %} <div li-if="product.metafields.custom.rating"> <div class="small-text semi untappd">{{ section.settings.text_untappd_score_1 }}</div> </div>{% endif %}</div><div class="_16-txt black ni">Checkin datum: <span class="text-span-3">{{ section.settings.text_untappd_datum_1 }}</span></div></div></div> </a>
-<a href="{{ section.settings.url_untappd_link_2 }}" class="untappd-rating w-inline-block"> <div class="afbeelding_icon"><img src="{{ section.settings.image_untappd_afbeelding_2 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_untappd_afbeelding_2.alt }}" class="abs-untappd"><div class="naam-untappd">{{ section.settings.text_untappd_naam_account_2 }}</div></div><div class="div-block-38"><div class="heading-style-h4-2 product">{{ section.settings.text_untappd_biernaam_2 }}</div><div class="untappd_meta"><div class="rating-wrapper"><div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div><div class="progress-bar voortgang"></div></div><div class="rt_text">{% if product.metafields.custom.rating %} <div li-if="product.metafields.custom.rating"> <div class="small-text semi score-text">{{ section.settings.text_untappd_score_2 }}</div> </div>{% endif %}</div><div class="_16-txt black ni">Checkin datum: <span class="text-span">{{ section.settings.text_untappd_datum_2 }}</span></div></div></div> </a>
-<a href="{{ section.settings.url_untappd_link_3 }}" class="untappd-rating w-inline-block"> <div class="afbeelding_icon"><img src="{{ section.settings.image_untappd_afbeelding_3 | img_url: 'master' }}" loading="lazy" alt="{{ section.settings.image_untappd_afbeelding_3.alt }}" class="abs-untappd"><div class="naam-untappd">{{ section.settings.text_untappd_naam_account_3 }}</div></div><div class="div-block-38"><div class="heading-style-h4-2 product">{{ section.settings.text_untappd_biernaam_3 }}</div><div class="untappd_meta"><div class="rating-wrapper"><div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div><div class="progress-bar voortgang"></div></div><div class="rt_text">{% if product.metafields.custom.rating %} <div li-if="product.metafields.custom.rating"> <div class="small-text semi score-text">{{ section.settings.text_untappd_score_3 }}</div> </div>{% endif %}</div><div class="_16-txt black ni">Checkin datum: <span class="text-span-2">{{ section.settings.text_untappd_datum_3 }}</span></div></div></div> </a>
-</div></div><div class="w-embed w-script"><script>document.addEventListener("DOMContentLoaded", function () {
+            <div class="untappd-grid">
+              <a href="{{ section.settings.url_untappd_link_1 }}" class="untappd-rating w-inline-block"> <div class="afbeelding_icon">{% if section.settings.image_untappd_afbeelding_1 %} {{ section.settings.image_untappd_afbeelding_1 | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'abs-untappd' }} {% else %} <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="abs-untappd"> {% endif %} <div class="naam-untappd">{{ section.settings.text_untappd_naam_account_1 }}</div> </div> <div class="div-block-38"> <div class="heading-style-h4-2 product">{{ section.settings.text_untappd_biernaam_1 }}</div> <div class="untappd_meta"> <div class="rating-wrapper"> <div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div> <div class="progress-bar voortgang"></div> </div> <div class="rt_text"> {% if product.metafields.custom.rating %} <div li-if="product.metafields.custom.rating"> <div class="small-text semi untappd">{{ section.settings.text_untappd_score_1 }}</div> </div>{% endif %} </div> <div class="_16-txt black ni">Checkin datum: <span class="text-span-3">{{ section.settings.text_untappd_datum_1 }}</span></div> </div> </div> </a>
+              <a href="{{ section.settings.url_untappd_link_2 }}" class="untappd-rating w-inline-block"> <div class="afbeelding_icon">{% if section.settings.image_untappd_afbeelding_2 %} {{ section.settings.image_untappd_afbeelding_2 | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'abs-untappd' }} {% else %} <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="abs-untappd"> {% endif %} <div class="naam-untappd">{{ section.settings.text_untappd_naam_account_2 }}</div> </div> <div class="div-block-38"> <div class="heading-style-h4-2 product">{{ section.settings.text_untappd_biernaam_2 }}</div> <div class="untappd_meta"> <div class="rating-wrapper"> <div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div> <div class="progress-bar voortgang"></div> </div> <div class="rt_text"> {% if product.metafields.custom.rating %} <div li-if="product.metafields.custom.rating"> <div class="small-text semi score-text">{{ section.settings.text_untappd_score_2 }}</div> </div>{% endif %} </div> <div class="_16-txt black ni">Checkin datum: <span class="text-span">{{ section.settings.text_untappd_datum_2 }}</span></div> </div> </div> </a>
+              <a href="{{ section.settings.url_untappd_link_3 }}" class="untappd-rating w-inline-block"> <div class="afbeelding_icon">{% if section.settings.image_untappd_afbeelding_3 %} {{ section.settings.image_untappd_afbeelding_3 | image_url: width: 1000 | image_tag: loading: 'lazy', class: 'abs-untappd' }} {% else %} <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="abs-untappd"> {% endif %} <div class="naam-untappd">{{ section.settings.text_untappd_naam_account_3 }}</div> </div> <div class="div-block-38"> <div class="heading-style-h4-2 product">{{ section.settings.text_untappd_biernaam_3 }}</div> <div class="untappd_meta"> <div class="rating-wrapper"> <div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div> <div class="progress-bar voortgang"></div> </div> <div class="rt_text"> {% if product.metafields.custom.rating %} <div li-if="product.metafields.custom.rating"> <div class="small-text semi score-text">{{ section.settings.text_untappd_score_3 }}</div> </div>{% endif %} </div> <div class="_16-txt black ni">Checkin datum: <span class="text-span-2">{{ section.settings.text_untappd_datum_3 }}</span></div> </div> </div> </a>
+            </div>
+          </div>
+          <div class="w-embed w-script">
+            <script>
+  document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
       const scores = document.querySelectorAll('.untappd');
       const bars = document.querySelectorAll('.voortgang');
@@ -18,4 +25,127 @@
       }
     }, 100); // delay indien nodig voor laadtijd
   });
-</script></div></div> {% schema %} {"tag":"div","name":"Untappd Reviews","class":"section_untappd","settings":[{"id":"text_headline_1","type":"text","label":"Headline 1","default":"Ingecheckt<br\/>bij Untappd"},{"id":"url_untappd_link_1","type":"url","label":"Untappd - Link 1"},{"id":"image_untappd_afbeelding_1","type":"image_picker","label":"Untappd - Afbeelding - 1"},{"id":"text_untappd_naam_account_1","type":"text","label":"Untappd - Naam Account 1","default":"Roel van der Donk"},{"id":"text_untappd_biernaam_1","type":"text","label":"Untappd - Biernaam 1","default":"nienke schut"},{"id":"text_untappd_score_1","type":"text","label":"Untappd Score - 1","default":"0.0"},{"id":"text_untappd_datum_1","type":"text","label":"Untappd - Datum - 1","default":"30-06-2025"},{"id":"url_untappd_link_2","type":"url","label":"Untappd - Link - 2"},{"id":"image_untappd_afbeelding_2","type":"image_picker","label":"Untappd - Afbeelding - 2"},{"id":"text_untappd_naam_account_2","type":"text","label":"Untappd - Naam Account 2","default":"Roel van der Donk"},{"id":"text_untappd_biernaam_2","type":"text","label":"Untappd - Biernaam 2","default":"nienke schut"},{"id":"text_untappd_score_2","type":"text","label":"Untappd Score - 2","default":"0.0"},{"id":"text_untappd_datum_2","type":"text","label":"Untappd - Datum - 2","default":"30-06-2025"},{"id":"url_untappd_link_3","type":"url","label":"Untappd - Link - 3"},{"id":"image_untappd_afbeelding_3","type":"image_picker","label":"Untappd - Afbeelding - 3"},{"id":"text_untappd_naam_account_3","type":"text","label":"Untappd - Naam Account 3","default":"Roel van der Donk"},{"id":"text_untappd_biernaam_3","type":"text","label":"Untappd - Biernaam 3","default":"nienke schut"},{"id":"text_untappd_score_3","type":"text","label":"Untappd Score - 3","default":"0.0"},{"id":"text_untappd_datum_3","type":"text","label":"Untappd - Datum - 3","default":"30-06-2025"}],"presets":[{"name":"Untappd Reviews","category":"Liquify","blocks":[]}]} {% endschema %}
+</script>
+          </div>
+        </div> {% schema %} {
+    "tag": "div",
+    "name": "Untappd Reviews",
+    "class": "section_untappd",
+    "settings": [
+        {
+            "id": "text_headline_1",
+            "type": "text",
+            "label": "Headline 1",
+            "default": "Ingecheckt<br\/>bij Untappd"
+        },
+        {
+            "id": "url_untappd_link_1",
+            "type": "url",
+            "label": "Untappd - Link 1"
+        },
+        {
+            "id": "image_untappd_afbeelding_1",
+            "type": "image_picker",
+            "label": "Untappd - Afbeelding - 1"
+        },
+        {
+            "id": "text_untappd_naam_account_1",
+            "type": "text",
+            "label": "Untappd - Naam Account 1",
+            "default": "Roel van der Donk"
+        },
+        {
+            "id": "text_untappd_biernaam_1",
+            "type": "text",
+            "label": "Untappd - Biernaam 1",
+            "default": "nienke schut"
+        },
+        {
+            "id": "text_untappd_score_1",
+            "type": "text",
+            "label": "Untappd Score - 1",
+            "default": "0.0"
+        },
+        {
+            "id": "text_untappd_datum_1",
+            "type": "text",
+            "label": "Untappd - Datum - 1",
+            "default": "30-06-2025"
+        },
+        {
+            "id": "url_untappd_link_2",
+            "type": "url",
+            "label": "Untappd - Link - 2"
+        },
+        {
+            "id": "image_untappd_afbeelding_2",
+            "type": "image_picker",
+            "label": "Untappd - Afbeelding - 2"
+        },
+        {
+            "id": "text_untappd_naam_account_2",
+            "type": "text",
+            "label": "Untappd - Naam Account 2",
+            "default": "Roel van der Donk"
+        },
+        {
+            "id": "text_untappd_biernaam_2",
+            "type": "text",
+            "label": "Untappd - Biernaam 2",
+            "default": "nienke schut"
+        },
+        {
+            "id": "text_untappd_score_2",
+            "type": "text",
+            "label": "Untappd Score - 2",
+            "default": "0.0"
+        },
+        {
+            "id": "text_untappd_datum_2",
+            "type": "text",
+            "label": "Untappd - Datum - 2",
+            "default": "30-06-2025"
+        },
+        {
+            "id": "url_untappd_link_3",
+            "type": "url",
+            "label": "Untappd - Link - 3"
+        },
+        {
+            "id": "image_untappd_afbeelding_3",
+            "type": "image_picker",
+            "label": "Untappd - Afbeelding - 3"
+        },
+        {
+            "id": "text_untappd_naam_account_3",
+            "type": "text",
+            "label": "Untappd - Naam Account 3",
+            "default": "Roel van der Donk"
+        },
+        {
+            "id": "text_untappd_biernaam_3",
+            "type": "text",
+            "label": "Untappd - Biernaam 3",
+            "default": "nienke schut"
+        },
+        {
+            "id": "text_untappd_score_3",
+            "type": "text",
+            "label": "Untappd Score - 3",
+            "default": "0.0"
+        },
+        {
+            "id": "text_untappd_datum_3",
+            "type": "text",
+            "label": "Untappd - Datum - 3",
+            "default": "30-06-2025"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Untappd Reviews",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
