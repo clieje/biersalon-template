@@ -1,18 +1,62 @@
-<div class="padding-global padding-section-medium prod"><div class="container-large"><div class="product_component"><div class="product_heading-wrapper"><div class="product_heading"><div class="max-width-large"><h2 class="heading-style-h2">
+<div class="padding-global padding-section-medium prod">
+          <div class="container-large">
+            <div class="product_component">
+              <div class="product_heading-wrapper">
+                <div class="product_heading">
+                  <div class="max-width-large">
+                    <h2 class="heading-style-h2">
 {{ section.settings.text_headline }}
 </h2>
-</div></div><div class="product_button-row hide-mobile-landscape"></div></div>{% assign collection = collections['bieren-1'] %}
-{% assign vendor = product.vendor %}
-{% assign productcount = 0 %}
-{% paginate collection.products by 3000 %}
-    <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000"><div li-for:inside="product in collection.products" role="list" class="product_list w-dyn-items">
+                  </div>
+                </div>
+                <div class="product_button-row hide-mobile-landscape"></div>
+              </div>
+              {% assign collection = collections['bieren-1'] %}
+              {% assign vendor = product.vendor %}
+              {% assign productcount = 0 %}
+              {% paginate collection.products by 3000 %}
+    <div li-paginate:by="3000" li-paginate="collection.products" class="product_list-wrapper w-dyn-list" by="3000">
+                <div li-for:inside="product in collection.products" role="list" class="product_list w-dyn-items">
         {% for product in collection.products %}                            
+                  
                             {% if product.vendor == vendor and productcount < 4 and product.available != false %}    <div li-if="product.vendor == vendor and productcount < 4 and product.available != false" role="listitem" class="product_list-item w-dyn-item">
-    {% render 'product_item', product: product %}
-{% assign productcount = productcount | plus: 1 %}
-    </div>
+    
+                    {% render 'product_item', product: product %}
+                    {% assign productcount = productcount | plus: 1 %}
+                      </div>
 {% endif %}
                             
+                
                     {% endfor %}    </div>
-<div class="hide w-dyn-empty"><div>No items found.</div></div></div>{% endpaginate %}
-</div></div></div> {% schema %} {"tag":"section","name":"Uitgelicht 2","class":"section_product","settings":[{"id":"text_headline","type":"text","label":"Headline","default":"Short heading here"}],"presets":[{"name":"Uitgelicht 2","category":"Liquify","blocks":[]}]} {% endschema %}
+                <div class="hide w-dyn-empty">
+                  <div>No items found.</div>
+                </div>
+              </div>{% endpaginate %}
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Uitgelicht 2",
+    "class": "section_product",
+    "settings": [
+        {
+            "id": "text_headline",
+            "type": "text",
+            "label": "Headline",
+            "default": "Short heading here"
+        },
+        {
+            "id": "text_geen_untappd_rating_melding",
+            "type": "text",
+            "label": "Geen Untappd rating - Melding",
+            "default": "Nog geen Untappd rating"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Uitgelicht 2",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
