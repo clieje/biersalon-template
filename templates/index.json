@@ -34,8 +34,8 @@
         "text_checkmark_41": "Fysieke store in Nederland"
       }
     },
-    "category": {
-      "type": "category",
+    "home-bieren": {
+      "type": "home-bieren",
       "settings": {
         "text_headline": "onze nieuwste bieren",
         "url_button_link": "/collections/bieren-1?sort_by=created-descending",
