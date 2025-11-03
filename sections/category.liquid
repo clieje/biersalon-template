@@ -2,10 +2,8 @@
           <div class="container-large">
             <div class="product_component">
               <div class="product_list-wrapper w-dyn-list">
-                <div li-for:inside="collection.products | sort_by: 'created_at' | reverse" role="list" class="product_list w-dyn-items">
-        {% for collection.products | sort_by: 'created_at' | reverse %}                            
-                  
-                            {% for product in section.settings.collection_collection.products limit: section.settings.collection_collection_limit %}
+                <div role="list" class="product_list w-dyn-items">
+                  {% for product in section.settings.collection_collection.products limit: section.settings.collection_collection_limit %}
 <div li-if="product.available != false" role="listitem" class="product_list-item w-dyn-item">
     
                     
@@ -14,9 +12,7 @@
                   
 </div>
 {% endfor %}
-                            
-                
-                    {% endfor %}    </div>
+                </div>
                 <div class="hide w-dyn-empty">
                   <div>No items found.</div>
                 </div>
