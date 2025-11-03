@@ -34,16 +34,6 @@
         "text_checkmark_41": "Fysieke store in Nederland"
       }
     },
-    "home-bieren": {
-      "type": "home-bieren",
-      "settings": {
-        "text_headline": "onze nieuwste bieren",
-        "url_button_link": "/collections/bieren-1?sort_by=created-descending",
-        "text_button_text": "Bekijken",
-        "collection_collection": "producten-op-voorraad",
-        "collection_collection_limit": 8
-      }
-    },
     "reclame_btMEjb": {
       "type": "reclame",
       "name": "reclame",
