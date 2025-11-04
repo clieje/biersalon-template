@@ -42,7 +42,7 @@
                             <div class="prdct-info">
                               <div class="title-container">
                                 <div li-object="product.vendor" class="small_vendor_text">{{ product.vendor }}</div>
-                                <h4 class="product-title-list">J’irai Où Tu Iras (Du-Bas Canada collab)</h4>
+                                <h4 li-object="product.title" class="product-title-list">{{ product.title }}</h4>
                               </div>
                               <div class="other-info">
                                 {% if product.metafields.custom.abv != blank %}    <div li-if="product.metafields.custom.abv != blank" class="product_info_meta">
