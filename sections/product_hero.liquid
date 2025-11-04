@@ -1,103 +1,363 @@
-<div class="padding-global padding-section-small"><script src="{{ 'liquify_custom.js' | asset_url }}" type="text/javascript"></script>
-<div li-element="product-variant-container" class="product-header-component" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">{% for image in product.images %}    <div li-for="image in product.images" class="product-image-container">
+<div class="padding-global padding-section-small">
+          <script src="{{ 'li_custom.js' | asset_url }}" type="text/javascript"></script>
+<div li-element="product-variant-container" class="product-header-component" x-data="handleVariant({{ product | json | escape }}, {{ product.options_by_name | json | escape }}, {{ product.selected_or_first_available_variant | json | escape }})" x-init="$nextTick(() => { activateVariants() })" @setbundleitem.window="updateBundleItem($event.detail.product, $event.detail.quantity)">
+            {% for image in product.images %}    <div li-for="image in product.images" class="product-image-container">
                                     <img li-object:src="image.src | product_img_url: 'master'" li-object:alt="image.alt" alt="{{ image.alt }}" src="{{ image.src | product_img_url: 'master' }}" loading="lazy" class="product-header_gallery-image-2">
-
                         </div>
-{% endfor %}<div class="product-info-container"><div><div li-object="product.vendor" class="small_vendor_text-2">{{ product.vendor }}</div><h1 li-object:text="product.title" class="h1_productpage">
+{% endfor %}
+            <div class="product-info-container">
+              <div>
+                <div li-object="product.vendor" class="small_vendor_text-2">{{ product.vendor }}</div>
+                <h1 li-object:text="product.title" class="h1_productpage">
 {{ product.title }}
-</h1></div>{% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
-    <div class="rt_text"><div class="small-text productpage">Untappd</div><div class="div-block-16"><div class="small-text productpage">(</div>{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating" class="div-block-17">
-    <div id="aantalr" li-object:text="product.metafields.custom.rating_count" class="small-text semi productpage aantalr">
+</h1>
+              </div>
+              {% if product.metafields.custom.rating != blank %}    <div li-if="product.metafields.custom.rating != blank" class="div-block-3">
+    
+                <div class="rt_text">
+                  <div class="small-text productpage">Untappd</div>
+                  <div class="div-block-16">
+                    <div class="small-text productpage">(</div>
+                    {% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating" class="div-block-17">
+    
+                      <div id="aantalr" li-object:text="product.metafields.custom.rating_count" class="small-text semi productpage aantalr">
 {{ product.metafields.custom.rating_count }}
-</div>    </div>
-{% endif %}<div class="small-text semi productpage">ratings</div><div class="small-text productpage">)</div></div></div><div class="untappd_meta"><div class="rating-wrapper"><div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating">
-</div><div class="progress-bar"></div></div><div class="rt_text">{% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
-    <div li-object:text="product.metafields.custom.rating" class="score-text">
+</div>
+                        </div>
+{% endif %}
+                    <div class="small-text semi productpage">ratings</div>
+                    <div class="small-text productpage">)</div>
+                  </div>
+                </div>
+                <div class="untappd_meta">
+                  <div class="rating-wrapper">
+                    <div class="empty-rating"><img loading="lazy" src="{{ 'svg.svg' | asset_url }}" alt="" class="rating"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                  <div class="rt_text">
+                    {% if product.metafields.custom.rating %}    <div li-if="product.metafields.custom.rating">
+    
+                      <div li-object:text="product.metafields.custom.rating" class="score-text">
 {{ product.metafields.custom.rating }}
-</div>    </div>
-{% endif %}</div></div>    </div>
-{% endif %}<div class="productdata"><div li="product.metafields.custom.inhoud != blank" class="meta-data-div"><div class="normal-text semi _14">
+</div>
+                        </div>
+{% endif %}
+                  </div>
+                </div>
+                  </div>
+{% endif %}
+              <div class="productdata">
+                <div li="product.metafields.custom.inhoud != blank" class="meta-data-div">
+                  <div class="normal-text semi _14">
 {{ section.settings.text_inhoud }}
 </div>
-<div li-object:text="product.metafields.custom.inhoud" class="normal-text _14">
+                  <div li-object:text="product.metafields.custom.inhoud" class="normal-text _14">
 {{ product.metafields.custom.inhoud }}
-</div></div>{% if product.metafields.custom.landen != blank %}    <div li-if="product.metafields.custom.landen != blank" class="meta-data-div">
-    <div class="normal-text semi _14">
+</div>
+                </div>
+                {% if product.metafields.custom.landen != blank %}    <div li-if="product.metafields.custom.landen != blank" class="meta-data-div">
+    
+                  <div class="normal-text semi _14">
 {{ section.settings.text_land_van_herkomst }}
 </div>
-<div li-object:text="product.metafields.custom.landen" class="normal-text _14">
+                  <div li-object:text="product.metafields.custom.landen" class="normal-text _14">
 {{ product.metafields.custom.landen }}
-</div>    </div>
-{% endif %}<div class="meta-data-div"><div id="w-node-_0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c11b-14be69d2" class="normal-text semi _14">
+</div>
+                    </div>
+{% endif %}
+                <div class="meta-data-div">
+                  <div id="w-node-_0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c11b-14be69d2" class="normal-text semi _14">
 {{ section.settings.text_brouwerij }}
 </div>
-<div li-object:text="product.vendor" class="normal-text _14">
+                  <div li-object:text="product.vendor" class="normal-text _14">
 {{ product.vendor }}
-</div></div><div class="meta-data-div"><div id="w-node-_2324d451-f839-54a8-bcaf-a3e43df43fc3-14be69d2" class="normal-text semi _14">
+</div>
+                </div>
+                <div class="meta-data-div">
+                  <div id="w-node-_2324d451-f839-54a8-bcaf-a3e43df43fc3-14be69d2" class="normal-text semi _14">
 {{ section.settings.text_bierstijl }}
 </div>
-<div class="normal-text _14">
+                  <div class="normal-text _14">
 {{ section.settings.text_bierstijl_inhoud }}
 </div>
-</div>{% if product.metafields.custom.abv != blank %}    <div li-if="product.metafields.custom.abv != blank" class="meta-data-div last">
-    <div class="normal-text semi _14">
+                </div>
+                {% if product.metafields.custom.abv != blank %}    <div li-if="product.metafields.custom.abv != blank" class="meta-data-div last">
+    
+                  <div class="normal-text semi _14">
 {{ section.settings.text_abv }}
 </div>
-<div li-object:text="product.metafields.custom.abv" class="normal-text _14">
+                  <div li-object:text="product.metafields.custom.abv" class="normal-text _14">
 {{ product.metafields.custom.abv }}
-</div>    </div>
-{% endif %}</div><div class="beschrijving-container"><div class="normal-text semi _14">
+</div>
+                    </div>
+{% endif %}
+              </div>
+              <div class="beschrijving-container">
+                <div class="normal-text semi _14">
 {{ section.settings.text_beschrijving }}
 </div>
-<div li-object="product.description" class="text-rich-text w-richtext">{{ product.description }}</div></div></div><div data-w-id="0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c124" class="product-add-to-cart"><div class="div-block-18"><div class="div-block-15"><div class="div-block-29"><div class="product-top"><div class="div-block-12"><div li-js-price="price" class="price-text-productpage" x-text="LiquifyHelper.moneyFormat(price, true, '{{ shop.money_with_currency_format }}')">€5,39</div><div li-object="product.compare_at_price | money" class="price-text-productpage compare">{{ product.compare_at_price | money }}</div></div><template x-if="selected_or_first_available_variant.available != true">
+                <div li-object="product.description" class="text-rich-text w-richtext">{{ product.description }}</div>
+              </div>
+            </div>
+            <div data-w-id="0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c124" class="product-add-to-cart">
+              <div class="div-block-18">
+                <div class="div-block-15">
+                  <div class="div-block-29">
+                    <div class="product-top">
+                      <div class="div-block-12">
+                        <div li-js-price="price" class="price-text-productpage" x-text="LiquifyHelper.moneyFormat(price, true, '{{ shop.money_with_currency_format }}')">€5,39</div>
+                        <div li-object="product.compare_at_price | money" class="price-text-productpage compare">{{ product.compare_at_price | money }}</div>
+                      </div>
+                      <template x-if="selected_or_first_available_variant.available != true">
             <div li-js-if="selected_or_first_available_variant.available != true" class="div-block-13">
-        <div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18"><circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#f58c8c"></circle><path id="cross" d="M3.7,4.611l-2.6,2.6A.622.622,0,0,1,.647,7.4a.622.622,0,0,1-.455-.185.635.635,0,0,1,0-.909L6.3.192a.635.635,0,0,1,.909,0,.635.635,0,0,1,0,.909l-2.6,2.6Z" transform="translate(12.698 5.299) rotate(90)" fill="#fff"></path><path id="cross-2" data-name="cross" d="M3.7,4.611l-2.6,2.6A.622.622,0,0,1,.647,7.4a.622.622,0,0,1-.455-.185.635.635,0,0,1,0-.909L6.3.192a.635.635,0,0,1,.909,0,.635.635,0,0,1,0,.909l-2.6,2.6Z" transform="translate(12.702 12.698) rotate(-180)" fill="#fff"></path></svg></div><div class="_16-txt">
+        
+                        <div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18">
+                            <circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#f58c8c"></circle>
+                            <path id="cross" d="M3.7,4.611l-2.6,2.6A.622.622,0,0,1,.647,7.4a.622.622,0,0,1-.455-.185.635.635,0,0,1,0-.909L6.3.192a.635.635,0,0,1,.909,0,.635.635,0,0,1,0,.909l-2.6,2.6Z" transform="translate(12.698 5.299) rotate(90)" fill="#fff"></path>
+                            <path id="cross-2" data-name="cross" d="M3.7,4.611l-2.6,2.6A.622.622,0,0,1,.647,7.4a.622.622,0,0,1-.455-.185.635.635,0,0,1,0-.909L6.3.192a.635.635,0,0,1,.909,0,.635.635,0,0,1,0,.909l-2.6,2.6Z" transform="translate(12.702 12.698) rotate(-180)" fill="#fff"></path>
+                          </svg></div>
+                        <div class="_16-txt">
 {{ section.settings.text_niet_op_voorraad }}
 </div>
-        </div>
+                              </div>
     </template>
-<template x-if="selected_or_first_available_variant.available != false">
+                      <template x-if="selected_or_first_available_variant.available != false">
             <div li-js-if="selected_or_first_available_variant.available != false" class="div-block-13">
-        <div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18"><circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#90f58c"></circle><path id="Checkmark" d="M2.973,4.964,7.937,0l.7.7L2.973,6.365,0,3.4l.7-.7Z" transform="translate(4.681 5.817)" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">
+        
+                        <div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18">
+                            <circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#90f58c"></circle>
+                            <path id="Checkmark" d="M2.973,4.964,7.937,0l.7.7L2.973,6.365,0,3.4l.7-.7Z" transform="translate(4.681 5.817)" fill="#fff" fill-rule="evenodd"></path>
+                          </svg></div>
+                        <div class="voorraadaantal">
+                          <div li-object="product.selected_or_first_available_variant.inventory_quantity" class="_16-txt">{{ product.selected_or_first_available_variant.inventory_quantity }}</div>
+                          <div class="_16-txt">
 {{ section.settings.text_op_voorraad }}
 </div>
-        </div>
+                        </div>
+                              </div>
     </template>
-</div>{% if product.metafields.custom.statiegeld != blank %}    <div li-if="product.metafields.custom.statiegeld != blank">
-    <div class="_16-txt">+ <span li-object:text="product.metafields.custom.statiegeld">
+                    </div>
+                    {% if product.metafields.custom.statiegeld != blank %}    <div li-if="product.metafields.custom.statiegeld != blank">
+    
+                      <div class="_16-txt">+ <span li-object:text="product.metafields.custom.statiegeld">
 {{ product.metafields.custom.statiegeld }}
-</span><span>
+</span> <span>
 {{ section.settings.text_statiegeld }}
-</span>
-</div>    </div>
-{% endif %}</div><div class="add-to-cart-form-pro w-form">{% form 'product', product, class: 'product-header-default' %}
+</span></div>
+                        </div>
+{% endif %}
+                  </div>
+                  <div class="add-to-cart-form-pro w-form">
+                    {% form 'product', product, class: 'product-header-default' %}
 <template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="add-to--pp">
         <input class="form-input w-input" max="product.variants.first.inventory_quantity" maxlength="256" name="quantity" li-element="add-to-cart-quantity" data-name="Quantity" min="1" placeholder="1" type="number" id="quantity" x-model="quantity">
-<div li-element="add-to-cart" data-w-id="0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c134" class="icon-btn yellow" @click="addToCart($event, true)" :disabled="!addToCartButton"><div class="_16-txt">
+                        <div li-element="add-to-cart" data-w-id="0ba8cbda-dcde-a4f4-1ac6-d44fd7c3c134" class="icon-btn yellow" @click="addToCart($event, true)" :disabled="!addToCartButton">
+                          <div class="_16-txt">
 {{ section.settings.text_in_winkelmand }}
 </div>
-<div class="incircle-brn"><div class="arrow_svg-2 yellow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 10.047 8.199"><g id="arrow" transform="translate(-0.5 -0.293)"><path id="Path_13" data-name="Path 13" d="M1,4.393h9.047M6.654,1l3.393,3.393L6.654,7.785" fill="none" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"></path></g></svg></div></div></div>        </div>
+                          <div class="incircle-brn">
+                            <div class="arrow_svg-2 yellow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 10.047 8.199">
+                                <g id="arrow" transform="translate(-0.5 -0.293)">
+                                  <path id="Path_13" data-name="Path 13" d="M1,4.393h9.047M6.654,1l3.393,3.393L6.654,7.785" fill="none" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"></path>
+                                </g>
+                              </svg></div>
+                          </div>
+                        </div>
+                              </div>
     </template>
-{% endform %}
-<div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div><div class="div-block-14"><div class="checks"><div class="payoff-1"><div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14"><path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">
+                    {% endform %}
+                    <div class="w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-block-14">
+                <div class="checks">
+                  <div class="payoff-1">
+                    <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14">
+                        <path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path>
+                      </svg></div>
+                    <div class="_16-txt">
 {{ section.settings.text_door_bierliefhebbers }}
 </div>
-</div><div class="payoff-1"><div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14"><path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">
+                  </div>
+                  <div class="payoff-1">
+                    <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14">
+                        <path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path>
+                      </svg></div>
+                    <div class="_16-txt">
 {{ section.settings.text_binnen_24_uur_verzonden }}
 </div>
-</div><div class="payoff-1"><div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14"><path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">
+                  </div>
+                  <div class="payoff-1">
+                    <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14">
+                        <path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path>
+                      </svg></div>
+                    <div class="_16-txt">
 {{ section.settings.text_1500_speciaalbieren }}
 </div>
-</div><div class="payoff-1"><div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14"><path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">
+                  </div>
+                  <div class="payoff-1">
+                    <div class="w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewbox="0 0 19 14">
+                        <path id="Checkmark" d="M6.539,10.917,17.456,0,19,1.54,6.54,14,0,7.469,1.543,5.927Z" fill="#fff" fill-rule="evenodd"></path>
+                      </svg></div>
+                    <div class="_16-txt">
 {{ section.settings.text_fysieke_store }}
 </div>
-</div></div><div><img loading="lazy" src="{{ 'icio.svg' | asset_url }}" alt="">
-</div></div></div></div><div class="add-to-cart-n"><div class="div-block-15 _33"><div class="product-top"><div class="div-block-12"><div li-js-price="price" class="price-text-productpage" x-text="LiquifyHelper.moneyFormat(price, true, '{{ shop.money_with_currency_format }}')">€5,39</div><div li-object="product.compare_at_price | money" class="price-text-productpage compare">{{ product.compare_at_price | money }}</div></div><div class="div-block-13"><div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18"><circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#90f58c"></circle><path id="Checkmark" d="M2.973,4.964,7.937,0l.7.7L2.973,6.365,0,3.4l.7-.7Z" transform="translate(4.681 5.817)" fill="#fff" fill-rule="evenodd"></path></svg></div><div class="_16-txt">Op voorraad</div></div></div><div class="add-to-cart-form-pro w-form">{% form 'product', product, class: 'product-header-default' %}
+                  </div>
+                </div>
+                <div><img loading="lazy" src="{{ 'icio.svg' | asset_url }}" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="add-to-cart-n">
+            <div class="div-block-15 _33">
+              <div class="product-top">
+                <div class="div-block-12">
+                  <div li-js-price="price" class="price-text-productpage" x-text="LiquifyHelper.moneyFormat(price, true, '{{ shop.money_with_currency_format }}')">€5,39</div>
+                  <div li-object="product.compare_at_price | money" class="price-text-productpage compare">{{ product.compare_at_price | money }}</div>
+                </div>
+                <div class="div-block-13">
+                  <div class="code-embed-2 w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18">
+                      <circle id="Ellipse_11" data-name="Ellipse 11" cx="9" cy="9" r="9" fill="#90f58c"></circle>
+                      <path id="Checkmark" d="M2.973,4.964,7.937,0l.7.7L2.973,6.365,0,3.4l.7-.7Z" transform="translate(4.681 5.817)" fill="#fff" fill-rule="evenodd"></path>
+                    </svg></div>
+                  <div class="_16-txt">Op voorraad</div>
+                </div>
+              </div>
+              <div class="add-to-cart-form-pro w-form">
+                {% form 'product', product, class: 'product-header-default' %}
 <template x-if="selected_or_first_available_variant.available">
             <div li-js-if="selected_or_first_available_variant.available" class="add-to--pp">
         <input class="form-input w-input" maxlength="256" name="quantity-2" li-element="add-to-cart-quantity" data-name="Quantity 2" placeholder="1" type="number" id="quantity-2" x-model="quantity">
-<div li-element="add-to-cart" class="icon-btn yellow" @click="addToCart($event, true)" :disabled="!addToCartButton"><div class="_16-txt">In winkelmand</div><div class="incircle-brn"><div class="arrow_svg-2 yellow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 10.047 8.199"><g id="arrow" transform="translate(-0.5 -0.293)"><path id="Path_13" data-name="Path 13" d="M1,4.393h9.047M6.654,1l3.393,3.393L6.654,7.785" fill="none" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"></path></g></svg></div></div></div>        </div>
+                    <div li-element="add-to-cart" class="icon-btn yellow" @click="addToCart($event, true)" :disabled="!addToCartButton">
+                      <div class="_16-txt">In winkelmand</div>
+                      <div class="incircle-brn">
+                        <div class="arrow_svg-2 yellow w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 10.047 8.199">
+                            <g id="arrow" transform="translate(-0.5 -0.293)">
+                              <path id="Path_13" data-name="Path 13" d="M1,4.393h9.047M6.654,1l3.393,3.393L6.654,7.785" fill="none" stroke="CurrentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" fill-rule="evenodd"></path>
+                            </g>
+                          </svg></div>
+                      </div>
+                    </div>
+                          </div>
     </template>
-{% endform %}
-<div class="w-form-done"><div>Thank you! Your submission has been received!</div></div><div class="w-form-fail"><div>Oops! Something went wrong while submitting the form.</div></div></div></div></div></div> {% schema %} {"tag":"section","name":"Product-Hero","class":"section_product-header","settings":[{"id":"text_inhoud","type":"text","label":"Inhoud","default":"Inhoud"},{"id":"text_land_van_herkomst","type":"text","label":"Land van herkomst","default":"Land van herkomst"},{"id":"text_brouwerij","type":"text","label":"Brouwerij","default":"Brouwerij"},{"id":"text_bierstijl","type":"text","label":"Bierstijl","default":"Bierstijl"},{"id":"text_bierstijl_inhoud","type":"text","label":"Bierstijl inhoud","default":"Data"},{"id":"text_abv","type":"text","label":"ABV","default":"ABV"},{"id":"text_beschrijving","type":"text","label":"Beschrijving","default":"Beschrijving"},{"id":"text_niet_op_voorraad","type":"text","label":"Niet op voorraad","default":"Niet op voorraad"},{"id":"text_op_voorraad","type":"text","label":"Op voorraad","default":"Op voorraad"},{"id":"text_statiegeld","type":"text","label":"statiegeld","default":"statiegeld"},{"id":"text_in_winkelmand","type":"text","label":"In winkelmand","default":"In winkelmand"},{"id":"text_door_bierliefhebbers","type":"text","label":"Door bierliefhebbers","default":"Door bierliefhebbers"},{"id":"text_binnen_24_uur_verzonden","type":"text","label":"Binnen 24 uur verzonden","default":"Binnen 24 uur verzonden"},{"id":"text_1500_speciaalbieren","type":"text","label":"1.500+ speciaalbieren","default":"1.500+\u00a0speciaalbieren"},{"id":"text_fysieke_store","type":"text","label":"Fysieke store","default":"Fysieke store"}],"presets":[{"name":"Product-Hero","category":"Liquify","blocks":[]}]} {% endschema %}
+                {% endform %}
+                <div class="w-form-done">
+                  <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                  <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> {% schema %} {
+    "tag": "section",
+    "name": "Product-Hero",
+    "class": "section_product-header",
+    "settings": [
+        {
+            "id": "text_inhoud",
+            "type": "text",
+            "label": "Inhoud",
+            "default": "Inhoud"
+        },
+        {
+            "id": "text_land_van_herkomst",
+            "type": "text",
+            "label": "Land van herkomst",
+            "default": "Land van herkomst"
+        },
+        {
+            "id": "text_brouwerij",
+            "type": "text",
+            "label": "Brouwerij",
+            "default": "Brouwerij"
+        },
+        {
+            "id": "text_bierstijl",
+            "type": "text",
+            "label": "Bierstijl",
+            "default": "Bierstijl"
+        },
+        {
+            "id": "text_bierstijl_inhoud",
+            "type": "text",
+            "label": "Bierstijl inhoud",
+            "default": "Data"
+        },
+        {
+            "id": "text_abv",
+            "type": "text",
+            "label": "ABV",
+            "default": "ABV"
+        },
+        {
+            "id": "text_beschrijving",
+            "type": "text",
+            "label": "Beschrijving",
+            "default": "Beschrijving"
+        },
+        {
+            "id": "text_niet_op_voorraad",
+            "type": "text",
+            "label": "Niet op voorraad",
+            "default": "Niet op voorraad"
+        },
+        {
+            "id": "text_op_voorraad",
+            "type": "text",
+            "label": "Op voorraad",
+            "default": "Op voorraad"
+        },
+        {
+            "id": "text_statiegeld",
+            "type": "text",
+            "label": "statiegeld",
+            "default": "statiegeld"
+        },
+        {
+            "id": "text_in_winkelmand",
+            "type": "text",
+            "label": "In winkelmand",
+            "default": "In winkelmand"
+        },
+        {
+            "id": "text_door_bierliefhebbers",
+            "type": "text",
+            "label": "Door bierliefhebbers",
+            "default": "Door bierliefhebbers"
+        },
+        {
+            "id": "text_binnen_24_uur_verzonden",
+            "type": "text",
+            "label": "Binnen 24 uur verzonden",
+            "default": "Binnen 24 uur verzonden"
+        },
+        {
+            "id": "text_1500_speciaalbieren",
+            "type": "text",
+            "label": "1.500+ speciaalbieren",
+            "default": "1.500+\u00a0speciaalbieren"
+        },
+        {
+            "id": "text_fysieke_store",
+            "type": "text",
+            "label": "Fysieke store",
+            "default": "Fysieke store"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Product-Hero",
+            "category": "Liquify",
+            "blocks": []
+        }
+    ]
+} {% endschema %}
